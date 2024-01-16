@@ -1,12 +1,16 @@
 import React from 'react';
 import './Header.css';
-import videoBg from '../assets/Primera Fuerza 2023.mp4'
+import logo_atmnl from '../assets/logo_atmnl.jpg'
 
 export default function Header(){
     return( 
-        <div className='header-background'>
-            <h1 className='header-title'>Asociacion de Tenis de Mesa de Nuevo Leon</h1>
-            <video src={videoBg} className='header-background-video' autoPlay loop muted/>
+        <div className='header'>
+            <img className='logo' src= {logo_atmnl} />
+            <h1 className='header-title'>Asociacion de</h1>
+            <h1 className='header-title'>Tenis de Mesa</h1>
+            <h1 className='header-title'>de Nuevo Leon</h1>
+            <input className='register' type='button' value='Registrarse'/>
+            <input className='login' type='button' value='Iniciar Sesión'/>
         </div>
     );
 }
