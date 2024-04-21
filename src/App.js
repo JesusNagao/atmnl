@@ -10,8 +10,8 @@ function App() {
     <main className='Main_View'>
       <Header />
       <div className='Grid'>
-        <Ult_Noticias className='Ultimas_Noticias'/>
-        <Eventos_prox />
+      <img src='/images/Circuito_Borregos.png' alt ="img_ultimasNoticias" className='img_ultimas_noticias'></img>
+
       </div>
       <div className='Eventos_Proximos'></div>
       <div className='Ultimos_Videos'></div>
