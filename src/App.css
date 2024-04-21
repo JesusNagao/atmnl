@@ -1,0 +1,31 @@
+main { 
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    overflow: scroll;
+   
+}
+
+body { 
+    background-color: white;
+    margin: auto;
+}
+
+
+.Ultimas_Noticias, .Eventos_Proximos, .Ultimos_Eventos {
+    width: 100vw;
+    height: 600px;
+}
+
+.Ultimas_Noticias {
+    overflow: hidden;
+}
+
+.img_ultimas_noticias {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+
