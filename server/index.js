@@ -1,31 +1,41 @@
 const express = require('express');
-const sql = require('mysql');
 require('dotenv').config()
+const sql = require('mssql');
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-const connection = sql.createConnection({
-    host: process.env.SERVER,
+const sqlConfig = {
     user: process.env.admin,
     password: process.env.pass,
-    database: process.env.db
-});
-
-connection.connect((err) => {
-    if (err) {
-    console.error('Error connecting to the database:', err);
-    return;
+    database: process.env.db,
+    server:process.env.SERVER,
+    pool: {
+      max: 10,
+      min: 0,
+      idleTimeoutMillis: 30
+    },
+    options: {
+      encrypt: false, // for azure
+      trustServerCertificate: false // change to true for local dev / self-signed certs
     }
-    console.log('Connected to the database!');
-   });
+  }
 
+async () => {
+    try {
+     // make sure that any items are correctly URL encoded in the connection string
+     await sql.connect(sqlConfig)
+     const result = await sql.query`select * from tbl_News`
+     console.dir(result)
+    } catch (err) {
+     // ... error checks
+    }
+   }
 
 app.use(express.static("build"));
 
 app.post('/hello', (req, res) => {
-    console.log('Hello World')
-    res.send("Hello World")
-})
+    
+});
 
 app.listen(port, () => console.log("Server Started"));
