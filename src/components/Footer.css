@@ -1,17 +1,20 @@
 .Footer{
-    position: static;
+    position: relative;    
+    background-color: #2d4062;
     left: 0;
     bottom: 0;
+
     width: 100%;
     box-sizing: border-box;
-    background-color: #2d4062;
+
+    overflow: auto;
     text-align: center;
     padding: 10px 0;
     height: auto;
-    z-index: 1000;
+    z-index: 1;
 }
 
-.Footer-title {
+.Footer-title { 
     margin-top: 0%;
     color: white;
     text-align: center;
@@ -42,5 +45,6 @@
     color: white;
     margin-right: 50px;
     margin-bottom: 20px;
+    text-decoration: none;
 }
 

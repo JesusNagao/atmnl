@@ -46,7 +46,7 @@ const Burger = styled.div`
 
     .nav-icon-2{
     width: 35px;
-    height: 30px;
+    height: 32px;
     margin: 10px 10px;
     position: relative;
     cursor: pointer;
