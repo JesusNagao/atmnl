@@ -1,0 +1,93 @@
+.Header {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+.TopHeader {
+    display: flex; /* Esto alinea los elementos hijos en una fila */
+    align-items: center; /* Esto centra los elementos hijos verticalmente */
+    justify-content: start; /* Esto alinea los elementos hijos al inicio de la contenedor */
+    position: relative;
+    width: 100%;
+    background-color: #1a1a1a;
+    padding: 10px 0;
+    height: 50px; /* Ten en cuenta que esto podría limitar la altura, haciendo que el contenido se superponga si es más alto */
+    z-index: 2;
+
+    @media screen and (max-width: 1580px) {
+        display: none;
+    }
+
+}
+.mediaLinks{
+    margin-right: 5rem;
+}
+.icon {
+    max-height: 100%;
+    width: auto; /* La anchura será la del contenido */
+    height: 50px; /* Esto podría hacer que la imagen se desborde de tu .Top-Header debido a su altura fija */
+    align-items: center;
+    border: .5rem solid transparent;
+}
+.iconBtn{
+    width: auto; /* La anchura será la del contenido */
+    height: auto; /* Esto podría hacer que la imagen se desborde de tu .Top-Header debido a su altura fija */
+    margin-top: 0;
+    padding: 8px;
+}
+.LowHeader {
+    display: flex;
+    place-items: center;
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #2d4062;
+    text-align: center;
+    padding: 10px 0;
+    margin-right: auto; 
+    height: auto; /*Esto hace que la altura se ajuste al tamaño del contenido*/
+    z-index: 1000;
+    /*
+    font-size: 100%;
+    align-self: center;*/
+    
+}
+.ATMNL_Logo {
+    flex-shrink: 0;
+    max-width: 100%;
+    max-height: 100px;
+    height: auto;
+    margin: 1rem;
+    align-self: left;
+    padding-left: 3rem;
+
+}
+.header-nav {
+    margin-left: 5rem;
+    @media (max-width: 1700px) {
+        display: none;
+    }
+}
+.Nav {
+    color: white;
+    text-decoration: none;
+    margin-right: 1rem; /* Espacio entre los enlaces*/
+    font-size: 42px;
+    width: 200px;
+}
+    
+h1 {
+    color: white;
+    margin-right: auto;
+    margin-left: 5rem; /* Establece un margen uniforme a izquierda y derecha */
+} 
+
+.burger {
+    display: none;
+    @media (max-height: 1700px) {
+        display: flex;
+        margin-left: auto;
+    }
+}
