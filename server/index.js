@@ -1,41 +1,51 @@
+//const { eventWrapper } = require('@testing-library/user-event/dist/utils');
 const express = require('express');
-require('dotenv').config()
+//require('dotenv').config()
+const md5 = require('md5');
 const sql = require('mssql');
+
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-const sqlConfig = {
-    user: process.env.admin,
-    password: process.env.pass,
-    database: process.env.db,
-    server:process.env.SERVER,
-    pool: {
-      max: 10,
-      min: 0,
-      idleTimeoutMillis: 30
-    },
-    options: {
-      encrypt: false, // for azure
-      trustServerCertificate: false // change to true for local dev / self-signed certs
-    }
-  }
-
-async () => {
-    try {
-     // make sure that any items are correctly URL encoded in the connection string
-     await sql.connect(sqlConfig)
-     const result = await sql.query`select * from tbl_News`
-     console.dir(result)
-    } catch (err) {
-     // ... error checks
-    }
-   }
-
 app.use(express.static("build"));
 
+var config = {
+  "user": process.env.admin_user, // Database username
+  "password": process.env.pass, // Database password
+  "server": process.env.SERVER, // Server IP address
+  "database": process.env.db, // Database name
+  "options": {
+      "encrypt": false // Disable encryption
+  }
+}
+
+/*sql.connect(config, err => {
+  if (err) {
+      throw err;
+  }
+  console.log("Connection Successful!");
+});
+*/
+
 app.post('/hello', (req, res) => {
-    
+  new sql.Request().query("SELECT * FROM tbl_News", (err, result) => {
+    if (err) {
+        console.error("Error executing query:", err);
+    } else {
+        res.send(result.recordset); // Send query result as response
+        //console.dir(result.recordset);
+        console.log("Query Successful")
+    }
+  });
+
+  //res.send("Query Successful")
+});
+
+app.post('/newUser',(req, res) => {
+  var msg = "Hello, this is my password";
+  console.log(md5(msg));
+  res.send("New User Added");
 });
 
 app.listen(port, () => console.log("Server Started"));

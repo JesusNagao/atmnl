@@ -13,8 +13,8 @@ export default function Header(){
                     <a href="/Calendario" className='Nav'>Calendario</a> {/*Es una de las pestañas más importantes para este sprint*/}
                     <a href="/Ranking" className='Nav'>Eventos</a> {/*Es una de las pestañas más importantes para este sprint*/}
                     <a href="/eventos" className='Nav'>Eventos</a> {/*Es una de las pestañas más importantes para este sprint*/}
-                    <form action='/hello' method='post'>
-                        <input type='submit' value='Nosotros'/>
+                    <form action='/newUser' method='post'>
+                        <input type='submit' value='New User'/>
                     </form>
                     {/* Más elementos de menú según sea necesario, posiblemente necesario*/}
                 </div>
