@@ -9,7 +9,6 @@ function App() {
   return (
     <main className='Main_View'>
       <Header />
-      <Header />
       <div className='Grid'>
       <img src='/images/Circuito_Borregos.png' alt ="img_ultimasNoticias" className='img_ultimas_noticias'></img>
 
