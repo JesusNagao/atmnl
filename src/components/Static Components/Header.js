@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.css';
+import Login from './Login'
 
 
 export default function Header(){
@@ -16,10 +17,7 @@ export default function Header(){
                     <a href="/eventos" className='Nav'>Eventos</a> {/*Es una de las pestañas más importantes para este sprint*/}
                     {/* Más elementos de menú según sea necesario, posiblemente necesario*/}
                 </div>
-                <div className='login'>
-                    
-
-                </div>
+                <Login />
             </div>
         </div>
     );

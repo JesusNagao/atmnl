@@ -1,5 +1,5 @@
-import Header from './components/Header'
-import Footer from './components/Footer'
+import Header from './components/Static Components/Header'
+import Footer from './components/Static Components/Footer'
 import Ult_Noticias from './Tabs/Ultimas_Noticias'
 import Eventos_prox from './Tabs/Eventos_Proximos'
 import './App.css';
