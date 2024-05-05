@@ -17,9 +17,9 @@ export default function Header() {
 
             </div>
             <div className='LowHeader'>
-            <a href="/">
-                <img href="/App.js" className='ATMNL_Logo' src='./images/AT.png' alt='atmnl.png'/>
-            </a>
+                <a href="/">
+                    <img href="/App.js" className='ATMNL_Logo' src='./images/AT.png' alt='atmnl.png'/>
+                </a>
                 <div className='header-nav'>
                     <a href="/Nosotros" className='Nav'>Acerca de Nosotros</a> {/*Es una de las pestañas más importantes para este sprint*/}
                     <a href="/noticias" className='Nav'>Ultimas Noticias</a> {/*Es una de las pestañas más importantes para este sprint*/}
