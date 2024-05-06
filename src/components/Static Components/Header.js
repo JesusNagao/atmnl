@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-//import BurgerButton from './BurgerButton';
+import BurgerButton from './BurgerButton';
 import Login from './Login'
 
 
@@ -33,6 +33,7 @@ export default function Header() {
                 </div>  
                 <Login className = 'Nav'/>
                 <div className='burger'>
+                    <BurgerButton/>
                 </div>
             </div>
         </div>

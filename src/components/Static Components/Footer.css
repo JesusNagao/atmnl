@@ -1,5 +1,6 @@
 .Footer{
-    position: fixed;
+    /*quiero que el footer se quede abajo*/
+    position:fixed;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -7,7 +8,6 @@
     text-align: center;
     padding: 10px 0;
     height:auto;
-    z-index: 1000;
 }
 
 .Footer-title {
@@ -27,15 +27,6 @@
     align-self: center;
 }
 
-.ATMNL_Logo {
-    flex-shrink: 0;
-    max-width: 100%;
-    max-height: 60px;
-    height: auto;
-    margin-left: 10px;
-    margin-right: auto;
-    align-self: left;
-}
 
 .Nav {
     color: white;

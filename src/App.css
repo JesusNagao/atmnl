@@ -1,31 +1,30 @@
-main { 
+ main { 
     background-color: white;
     margin: 0;
     padding: 0;
-    width: 100vw;
+    width: 100%;
     overflow: scroll;
-   
+    min-height: 1000px;
 }
 
-body { 
+html, body { 
     background-color: white;
-    margin: auto;
+    margin: 0;
+    padding: 0;
+    height: 100%;
 }
 
 
 .Ultimas_Noticias, .Eventos_Proximos, .Ultimos_Eventos {
-    width: 100vw;
-    height: 600px;
+    width: 100%;
+    height: inherit;
 }
 
 .Ultimas_Noticias {
     overflow: hidden;
 }
-
-.img_ultimas_noticias {
-    position: relative;
+.img_ultimas_noticias img {
     width: 100%;
     height: auto;
 }
-
 
