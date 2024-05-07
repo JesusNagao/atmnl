@@ -1,7 +1,7 @@
 import express from "express";
 import md5 from "md5";
 import {getClubs, getNews, getEvents, getUsers} from "./lib/getSQL.js"
-import { postClub } from "./lib/postSQL.js";
+import { postClub, postNews } from "./lib/postSQL.js";
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -26,7 +26,12 @@ app.post('/newClub', (req, res) => {
 
 app.post('/clubs', (req, res) => {
   postClub();
-})
+});
+
+app.post('/news', (req, res) => {
+  var result = postNews(req.name, req.desc, req.imgURL);
+  res.send(result.recordset)
+});
 
 app.post('/login', (req, res) => {
 
