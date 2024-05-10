@@ -60,6 +60,11 @@ app.get('/events', (req, res) => {
 app.get('/users', (req, res) => {
   getUsers().then(result => res.send(result));
 });
+
+app.get('/print', (req, res) => {
+  console.log("Hello From Frontend")
+});
+
 ////////////////////////////////////////////////////////////////
 
 

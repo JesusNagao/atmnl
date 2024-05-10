@@ -28,8 +28,7 @@ export default function Login(){
     const handleButtonClick = () => {
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
-        // Do something with the email and password values
-
+        // Do something with the email and password values;
     };
 
     // ...

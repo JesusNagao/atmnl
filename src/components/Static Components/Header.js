@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css';
 import BurgerButton from './BurgerButton';
-import Login from './Login'
+import Login from '../Dynamic Components/Login'
 
 
 export default function Header() {
