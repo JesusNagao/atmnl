@@ -1,5 +1,9 @@
 import express from "express";
 import md5 from "md5";
+import https from "http";
+import fs from "fs";
+
+
 import {getClubs, getNews, getEvents, getUsers} from "./lib/getSQL.js"
 import { postClub, postNews } from "./lib/postSQL.js";
 
@@ -59,6 +63,6 @@ app.get('/users', (req, res) => {
 ////////////////////////////////////////////////////////////////
 
 
+https.createServer({}, app).listen(port, () => console.log("Server Started"));
 
-app.listen(port, () => console.log("Server Started"));
 
