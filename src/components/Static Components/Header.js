@@ -5,6 +5,16 @@ import Login from '../Dynamic Components/Login'
 
 
 export default function Header() {
+
+    function getNews(){
+        fetch('http://localhost:3000/news').then(() => {
+            console.log("News Received")
+            //setmsg("News Received")
+            //setIsPending(false);
+        })
+    }
+
+
     return (
         <div className='Header'>
             <div className='TopHeader'>
@@ -23,8 +33,8 @@ export default function Header() {
                     <img href="/App.js" className='ATMNL_Logo' src='./images/AT.png' alt='atmnl.png'/>
                 </a>
                 <div className='header-nav'>
-                    <a href="/Nosotros" className='Nav'>Acerca de Nosotros</a> {/*Es una de las pestañas más importantes para este sprint*/}
-                    <a href="/noticias" className='Nav'>Ultimas Noticias</a> {/*Es una de las pestañas más importantes para este sprint*/}
+                    <a className='Nav'>Acerca de Nosotros</a> {/*Es una de las pestañas más importantes para este sprint*/}
+                    <a className='Nav' onClick={getNews}>Ultimas Noticias</a> {/*Es una de las pestañas más importantes para este sprint*/}
                     <a href="/Calendario" className='Nav'>Calendario</a> {/*Es una de las pestañas más importantes para este sprint*/}
                     <a href="/Ranking" className='Nav'>Ranking</a> {/*Es una de las pestañas más importantes para este sprint*/}
                     <a href="/eventos" className='Nav'>Eventos</a> {/*Es una de las pestañas más importantes para este sprint*/}
