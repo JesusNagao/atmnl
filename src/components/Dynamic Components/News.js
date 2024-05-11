@@ -17,12 +17,22 @@ export default function News(){
             setIsPending(false);
         })
     }*/
+
+    const [news, setNews] = useState('')
+
+    function getNews(){
+        fetch('http://localhost:3000/clubs').then(result => {
+            console.log("News received")
+        }).then(result =>{
+            setNews(result.json)
+        })
+    }
     
     return(
         <div className="newsContainer" onLoad={getNews}>
 
-            <label onLoad={getNews}>Hello</label>
-
+            <label>Hello</label>
+            <button onClick={getNews}>Click</button>
         </div>
     );
 }
