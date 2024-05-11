@@ -46,7 +46,10 @@ app.post('/login', (req, res) => {
 
 //GETTERS///////////////////////////////////////////////////////
 app.get('/clubs', (req, res) =>{
-  getClubs().then(result => res.send(result));
+  getClubs().then(result => {
+    res.send(result)  
+  })
+  
 });
 
 app.get('/news', (req, res) => {
@@ -58,7 +61,9 @@ app.get('/events', (req, res) => {
 });
 
 app.get('/users', (req, res) => {
-  getUsers().then(result => res.send(result));
+  const result = getUsers()
+  console.log(result)
+  res.send(result)
 });
 
 app.get('/print', (req, res) => {

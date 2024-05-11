@@ -3,36 +3,39 @@ import './News.css';
 
 
 export default function News(){
-    /*    
-    const [isPending, setIsPending] = useState('false');
-    const [msg, setmsg] = useState('')
-
-    function getNews(){
-        
-        console.log("Hello")
-        
-        fetch('http://localhost:3000/news').then(() => {
-            console.log("News Received")
-            setmsg("News Received")
-            setIsPending(false);
-        })
-    }*/
 
     const [news, setNews] = useState('')
+    const [pending, setPending] = useState('true')
 
     function getNews(){
         fetch('http://localhost:3000/clubs').then(result => {
-            console.log("News received")
-        }).then(result =>{
-            setNews(result.json)
+            return result.json();
+        }).then(result => {
+            setNews(result)
+        }).then(() => {
+            setPending('false')
         })
     }
+
+    function printNews(){
+        console.log(news[0].name)
+    }
+
+    window.addEventListener('load', getNews())
+    window.addEventListener('load', printNews())
     
     return(
         <div className="newsContainer" onLoad={getNews}>
-
-            <label>Hello</label>
-            <button onClick={getNews}>Click</button>
+            <div className="loadingNews" style={{display: pending ? 'none' : 'inline'}}>
+                <h1>Loading</h1>
+                
+            </div>
+            
+            <div className="loadedNews" style={{display: !pending ? 'none' : 'inline'}}>
+                <h1 onLoad={printNews}>Loaded</h1>
+                <label></label>
+            </div>
         </div>
     );
+    
 }
