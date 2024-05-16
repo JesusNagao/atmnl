@@ -5,7 +5,7 @@ import './News.css';
 export default function News(){
 
     const [news, setNews] = useState('')
-    const [pending, setPending] = useState('true')
+    const [pending, setPending] = useState(true)
 
     function getNews(){
         fetch('http://localhost:3000/clubs').then(result => {
@@ -13,29 +13,28 @@ export default function News(){
         }).then(result => {
             setNews(result)
         }).then(() => {
-            setPending('false')
+            setPending(false)
         })
     }
 
-    function printNews(){
-        console.log(news[0].name)
+    window.addEventListener('load', getNews())
+
+    if (pending){
+        return(
+            <div className="newsContainer" onLoad={getNews}>
+                <div className="loadingNews">
+                    <h1>Loading</h1>
+                </div>
+            </div>
+        );
     }
 
-    window.addEventListener('load', getNews())
-    window.addEventListener('load', printNews())
-    
     return(
-        <div className="newsContainer" onLoad={getNews}>
-            <div className="loadingNews" style={{display: pending ? 'none' : 'inline'}}>
-                <h1>Loading</h1>
-                
-            </div>
-            
-            <div className="loadedNews" style={{display: !pending ? 'none' : 'inline'}}>
-                <h1 onLoad={printNews}>Loaded</h1>
-                <label></label>
+        <div className="newsContainer">
+            <div className="loadedNews">
+                <h1>Loaded</h1>
             </div>
         </div>
     );
-    
+        
 }
