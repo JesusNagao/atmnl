@@ -33,6 +33,7 @@ export default function News(){
         <div className="newsContainer">
             <div className="loadedNews">
                 <h1>Loaded</h1>
+                <h2>{news[0].name}</h2>
             </div>
         </div>
     );
