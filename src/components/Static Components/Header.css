@@ -15,7 +15,7 @@
     height: 20px; /* Ten en cuenta que esto podría limitar la altura, haciendo que el contenido se superponga si es más alto */
     z-index: 2;
 
-    @media screen and (max-width:900px) {
+    @media screen and (max-width:1000px) {
         display: none;
     }
 
@@ -60,7 +60,7 @@
     max-width: auto; /* Adjust this value to control the width of the logo */
     height: inherit; /* This ensures the height adjusts proportionally to the width */
     align-self: left;
-    @media only screen and (max-width: 900px) {
+    @media only screen and (max-width: 1000px) {
     }
 }
 .LowHeader a 
@@ -72,7 +72,7 @@
     color: white;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
      
-    @media (max-width: 900px) {
+    @media (max-width: 1000px) {
         display: none;
     }
 }
@@ -127,7 +127,7 @@
 .burger {
     margin-left: auto;
     padding: 1.5rem;
-    @media only screen and (min-width: 900px) {
+    @media only screen and (min-width: 1001px) {
         display: none;
     }
 }
