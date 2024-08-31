@@ -1,6 +1,6 @@
 import React from 'react';
 import './Header.css';
-import BurgerButton from './BurgerButton';
+import BurgerButton from '../BurgerButton';
 import Login from '../Dynamic Components/Login'
 
 
@@ -41,10 +41,10 @@ export default function Header() {
                    
                     {/* Más elementos de menú según sea necesario, posiblemente necesario*/}
                 </div>  
-                <Login className = 'Nav'/>
+                {/*<Login className = 'Nav'/>
                 <div className='burger'>
                     <BurgerButton/>
-                </div>
+                </div>*/}
             </div>
         </div>
        

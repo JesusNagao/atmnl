@@ -1,17 +1,23 @@
-import Header from './components/Static Components/Header'
-import Footer from './components/Static Components/Footer'
-import AboutUs from './components/Static Components/AboutUs'
-import Events from './components/Static Components/Events'
+import Header from './components/Static Components/Header/Header'
+import Footer from './components/Static Components/Footer/Footer'
+import AboutUs from './components/Static Components/About Us/AboutUs'
+//import Events from './components/Static Components/Events'
 
 
-import News from './components/Dynamic Components/News'
-import Ult_Noticias from './Tabs/Ultimas_Noticias'
-import Eventos_prox from './Tabs/Eventos_Proximos'
-import UploadNews from './components/Dynamic Components/UploadNews'
+import News from './components/Dynamic Components/News/News'
+import UploadNews from './components/Dynamic Components/Upload News/UploadNews'
 import './App.css';
 
+import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+
+const Events = React.lazy(() => import('./components/Static Components/Events/Events'))
+const MainPage = React.lazy(() => import('./components/Dynamic Components/MainPage/MainPage')) 
+
+
 function App() {
-  
+
+
   return (
     <main className='Main_View'>
       <Header />
@@ -20,10 +26,17 @@ function App() {
       
       </div>
 
-      <Events />
+      <BrowserRouter>
+        <Routes>
+          <Route path={'/'} Component={MainPage}></Route>
+          <Route path={'/Calendario'} Component={Events}></Route>
+        </Routes>
+      </BrowserRouter>
     
       <aside className='bloque_derecha'></aside>
 
+      
+      <Footer />
       
         
       
