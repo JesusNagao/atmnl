@@ -1,6 +1,5 @@
 import Header from './components/Static Components/Header/Header'
 import Footer from './components/Static Components/Footer/Footer'
-import AboutUs from './components/Static Components/About Us/AboutUs'
 //import Events from './components/Static Components/Events'
 
 
@@ -12,6 +11,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 const Events = React.lazy(() => import('./components/Static Components/Events/Events'))
 const MainPage = React.lazy(() => import('./components/Dynamic Components/Main Page/MainPage')) 
+const AboutUs = React.lazy(() => import('./components/Static Components/About Us/AboutUs')) 
 
 
 function App() {
@@ -29,6 +29,7 @@ function App() {
         <Routes>
           <Route path={'/'} Component={MainPage}></Route>
           <Route path={'/Calendario'} Component={Events}></Route>
+          <Route path={'/Acerca'} Component={AboutUs}></Route>
         </Routes>
       </BrowserRouter>
     

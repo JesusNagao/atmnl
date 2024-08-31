@@ -1,7 +1,24 @@
-#aboutus{
-    position:fixed;
+.aboutus{
+    position:absolute;
     top: 10%;
     width: 100%;
     padding: 10px 0;
     height:auto;
+}
+
+.miembrosimg {
+    border-radius: 50%;
+    height: 10%;
+    width: 60%;
+    object-fit: cover;
+}
+.miembros{
+    display:inline-block;
+}
+
+.miembro{
+    text-align: center;
+    width: 15%;
+    white-space: wrap;
+    display:inline-block;
 }

@@ -25,7 +25,7 @@ export default function Header() {
                     <img href="/App.js" className='ATMNL_Logo' src='./images/AT.png' alt='atmnl.png'/>
                 </a>
                 <div className='header-nav'>
-                    <a className='Nav'>Acerca de Nosotros</a>
+                    <a href='/Acerca' className='Nav'>Acerca de Nosotros</a>
                     <a href="/Calendario" className='Nav'>Calendario</a>
                     <a href="/Ranking" className='Nav'>Ranking</a> 
                 </div>  
