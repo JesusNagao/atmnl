@@ -8,7 +8,7 @@ export default function News(){
     const [pending, setPending] = useState(true)
 
     function getNews(){
-        fetch('http://localhost:3000/clubs').then(result => {
+        fetch('http://localhost:3000/News').then(result => {
             return result.json();
         }).then(result => {
             setNews(result)

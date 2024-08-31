@@ -33,8 +33,9 @@ app.post('/clubs', (req, res) => {
 });
 
 app.post('/news', (req, res) => {
-  var result = postNews(req.name, req.desc, req.imgURL);
-  res.send(result.recordset)
+  //var result = postNews(req.name, req.desc, req.imgURL);
+  //res.send(result.recordset)
+  console.log(req.body)
 });
 
 app.post('/login', (req, res) => {
@@ -64,10 +65,6 @@ app.get('/users', (req, res) => {
   const result = getUsers()
   console.log(result)
   res.send(result)
-});
-
-app.get('/print', (req, res) => {
-  console.log("Hello From Frontend")
 });
 
 ////////////////////////////////////////////////////////////////
