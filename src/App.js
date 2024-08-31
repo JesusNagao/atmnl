@@ -4,7 +4,6 @@ import AboutUs from './components/Static Components/About Us/AboutUs'
 //import Events from './components/Static Components/Events'
 
 
-import News from './components/Dynamic Components/News/News'
 import UploadNews from './components/Dynamic Components/Upload News/UploadNews'
 import './App.css';
 
@@ -12,7 +11,7 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 const Events = React.lazy(() => import('./components/Static Components/Events/Events'))
-const MainPage = React.lazy(() => import('./components/Dynamic Components/MainPage/MainPage')) 
+const MainPage = React.lazy(() => import('./components/Dynamic Components/Main Page/MainPage')) 
 
 
 function App() {

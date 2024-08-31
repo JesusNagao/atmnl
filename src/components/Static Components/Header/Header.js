@@ -1,18 +1,10 @@
 import React from 'react';
 import './Header.css';
-import BurgerButton from '../BurgerButton';
-import Login from '../Dynamic Components/Login'
+//import BurgerButton from '../BurgerButton';
+//import Login from '../Dynamic Components/Login'
 
 
 export default function Header() {
-
-    function getNews(){
-        fetch('http://localhost:3000/news').then(() => {
-            console.log("News Received")
-            //setmsg("News Received")
-            //setIsPending(false);
-        })
-    }
 
 
     return (
@@ -33,13 +25,9 @@ export default function Header() {
                     <img href="/App.js" className='ATMNL_Logo' src='./images/AT.png' alt='atmnl.png'/>
                 </a>
                 <div className='header-nav'>
-                    <a className='Nav'>Acerca de Nosotros</a> {/*Es una de las pestañas más importantes para este sprint*/}
-                    <a className='Nav' onClick={getNews}>Ultimas Noticias</a> {/*Es una de las pestañas más importantes para este sprint*/}
-                    <a href="/Calendario" className='Nav'>Calendario</a> {/*Es una de las pestañas más importantes para este sprint*/}
-                    <a href="/Ranking" className='Nav'>Ranking</a> {/*Es una de las pestañas más importantes para este sprint*/}
-                    <a href="/eventos" className='Nav'>Eventos</a> {/*Es una de las pestañas más importantes para este sprint*/}
-                   
-                    {/* Más elementos de menú según sea necesario, posiblemente necesario*/}
+                    <a className='Nav'>Acerca de Nosotros</a>
+                    <a href="/Calendario" className='Nav'>Calendario</a>
+                    <a href="/Ranking" className='Nav'>Ranking</a> 
                 </div>  
                 {/*<Login className = 'Nav'/>
                 <div className='burger'>
