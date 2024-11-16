@@ -33,7 +33,7 @@ app.post('/clubs', (req, res) => {
 });
 
 app.post('/news', (req, res) => {
-  //var result = postNews(req.name, req.desc, req.imgURL);
+  //var result = postNews(req.newsName, req.newsDesc, req.imgURL);
   //res.send(result.recordset)
   console.log(req.body)
 });
