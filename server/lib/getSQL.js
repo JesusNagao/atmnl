@@ -13,7 +13,7 @@ export async function getClubs(){
 export async function getNews(){
   try{
     const pool = await getConnection();
-    const result = await pool.request().query("SELECT * FROM [atmnldev].[dbo].[tbl_News]");
+    const result = await pool.request().query("SELECT * FROM [atmnl_test].[dbo].[tblnews]");
     return result.recordset;
   }catch(error){
     console.error(error);

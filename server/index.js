@@ -13,6 +13,7 @@ const port = process.env.PORT || 3000;
 
 app.use(express.static("build"));
 
+
 app.post('/newClub', (req, res) => {
 
   query = "INSERT INTO [atmnldev].[dbo].[tbl_Club] (name, phone, email, logoURL) VALUES (" + nameval + ", " + phoneval + ", " + emailval + ", " + logoURLval + ");"
@@ -50,7 +51,6 @@ app.get('/clubs', (req, res) =>{
   getClubs().then(result => {
     res.send(result)  
   })
-  
 });
 
 app.get('/news', (req, res) => {
@@ -69,6 +69,7 @@ app.get('/users', (req, res) => {
 
 ////////////////////////////////////////////////////////////////
 
+console.log(process.env.server)
 
 https.createServer({}, app).listen(port, () => console.log("Server Started"));
 
