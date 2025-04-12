@@ -1,6 +1,6 @@
 .Footer{
     /*quiero que el footer se quede abajo*/
-    position:fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
