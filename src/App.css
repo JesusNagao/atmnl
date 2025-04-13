@@ -1,7 +1,7 @@
 main { 
-    background-color: white;
-    margin: 0;
-    padding: 0;
+    background-color: #f8f9fa;
+    margin: 0px;
+    padding: 0px;
     width: 100%;
     overflow: auto;
     min-height: 1000px;
@@ -9,8 +9,8 @@ main {
 
 html, body { 
     background-color: white;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     height: 100%;
 }
 
