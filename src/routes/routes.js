@@ -1,35 +1,17 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import App from './App';
+import { Routes, Route } from 'react-router-dom';
+import MainPage from '../components/DynamicComponents/MainPage/MainPage.js';
+import Federation from '../components/StaticComponents/AboutUs/AboutUs.js';
+import Calendar from '../components/StaticComponents/Events/Events';
+import Ranking from '../components/DynamicComponents/Ranking/Ranking';
 
-import CalendarPage from './pages/Calendar';
-import RankingPage from './pages/Ranking';
-import FederationPage from './pages/Federation';
-
-const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <App />,
-    children: [
-      {
-        path: 'calendario',
-        element: <CalendarPage />
-      },
-      {
-        path: 'ranking',
-        element: <RankingPage />
-      },
-      {
-        path: 'federacion',
-        element: <FederationPage />
-      }
-    ]
-  }
-]);
-
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+const AppRoutes = () => (
+  <Routes>
+    <Route path="/" element={<MainPage />} />
+    <Route path="/federacion" element={<Federation />} />
+    <Route path="/calendario" element={<Calendar />} />
+    <Route path="/ranking" element={<Ranking />} />
+  </Routes>
 );
+
+export default AppRoutes;

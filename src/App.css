@@ -1,9 +1,9 @@
- main { 
+main { 
     background-color: white;
     margin: 0;
     padding: 0;
     width: 100%;
-    overflow: hidden;
+    overflow: auto;
     min-height: 1000px;
 }
 

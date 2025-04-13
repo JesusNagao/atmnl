@@ -1,6 +1,7 @@
 import React from 'react';
 import Header from './components/StaticComponents/Header/Header'
 import Footer from './components/StaticComponents/Footer/Footer'
+import AppRoutes from './routes/routes';
 //import Events from './components/Static Components/Events'
 
 import { Outlet } from 'react-router-dom';
@@ -11,7 +12,7 @@ function App() {
     <div className="page-wrapper">
       <Header />
       <main className="main-content">
-        <Outlet /> {/* This renders the page component for the current route */}
+        <AppRoutes />
       </main>
       <Footer />
     </div>
