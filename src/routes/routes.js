@@ -1,17 +1,13 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-import MainPage from '../components/DynamicComponents/MainPage/MainPage.js';
-import Federation from '../components/StaticComponents/AboutUs/AboutUs.js';
-import Calendar from '../components/StaticComponents/Events/Events';
-import Ranking from '../components/DynamicComponents/Ranking/Ranking';
+import Home from '../components/DynamicComponents/MainPage/MainPage';
+import About from '../components/StaticComponents/AboutUs/AboutUs';
+import Events from '../components/StaticComponents/Events/Events';
 
-const AppRoutes = () => (
-  <Routes>
-    <Route path="/" element={<MainPage />} />
-    <Route path="/federacion" element={<Federation />} />
-    <Route path="/calendario" element={<Calendar />} />
-    <Route path="/ranking" element={<Ranking />} />
-  </Routes>
-);
+const routes = [
+  { path: '/', name: 'Inicio', element: <Home /> },
+  { path: '/federacion', name: 'Sobre Nosotros', element: <About /> },
+  
+  { path: '/calendario', name: 'calendario', element: <Events /> },
+  // Add more as needed
+];
 
-export default AppRoutes;
+export default routes;

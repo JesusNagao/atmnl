@@ -1,23 +1,24 @@
 import React from 'react';
-import Header from './components/StaticComponents/Header/Header'
-import Footer from './components/StaticComponents/Footer/Footer'
-import AppRoutes from './routes/routes';
-//import Events from './components/Static Components/Events'
-
-import { Outlet } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Header from './components/StaticComponents/Header/Header';
+import Footer from './components/StaticComponents/Footer/Footer';
+import routes from './routes/routes';
 import './App.css';
 
 function App() {
   return (
-    <div className="page-wrapper">
+    <Router>
       <Header />
-      <main className="main-content">
-        <AppRoutes />
+      <main className="app-content" style={{ paddingTop: '80px', paddingBottom: '60px' }}>
+        <Routes>
+          {routes.map(({ path, element }, index) => (
+            <Route key={index} path={path} element={element} />
+          ))}
+        </Routes>
       </main>
       <Footer />
-    </div>
+    </Router>
   );
 }
 
 export default App;
-
