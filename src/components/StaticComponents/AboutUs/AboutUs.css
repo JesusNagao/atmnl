@@ -2,6 +2,7 @@
 
 /* Estilos generales */
 .about-container {
+  width: 100%;
   font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
   color: #333;
   line-height: 1.6;
@@ -71,7 +72,6 @@
 .about-content {
   width: 100%;
   margin: 0 auto;
-  padding: 2rem;
 }
 
 .about-intro {
@@ -95,6 +95,7 @@
 /* Pestañas de navegación */
 .tab-container {
   margin-bottom: 3rem;
+  padding: 0 20px;
 }
 
 .tab-buttons {

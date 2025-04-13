@@ -6,7 +6,13 @@ main {
     overflow: auto;
     min-height: 1000px;
 }
-
+.app-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
 html, body { 
     background-color: white;
     margin: 0px;
