@@ -147,6 +147,7 @@
 
 .team-category {
   margin-bottom: 2rem;
+
 }
 
 .category-title {
@@ -163,9 +164,14 @@
 
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, 300px); /* fixed size */
+  justify-content: center; /* centers items horizontally */
   gap: 1.5rem;
+  text-align: center;
 }
+
+
+
 
 .team-card {
   background-color: white;
