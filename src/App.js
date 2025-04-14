@@ -9,7 +9,7 @@ function App() {
   return (
     <Router>
       <Header />
-      <main className="app-content" style={{ paddingTop: '20px', paddingBottom: '60px' }}>
+      <main className="app-content" style={{ paddingTop: '10px', paddingBottom: '30px' }}>
         <Routes>
           {routes.map(({ path, element }, index) => (
             <Route key={index} path={path} element={element} />
