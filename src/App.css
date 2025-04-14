@@ -16,7 +16,7 @@ main {
     overflow: hidden;
 }
 html, body { 
-    background-color: white;
+    background-color: #f8f9fa;
     margin: 0px;
     padding: 0px;
     height: 100%;
