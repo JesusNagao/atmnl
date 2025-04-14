@@ -343,7 +343,7 @@ export default function RankingsPage() {
   
   // Handle back to selection
   const handleBackToSelection = () => {
-    navigate('/');
+    navigate('/ranking-selection');
   };
 
   return (
