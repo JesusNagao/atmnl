@@ -4,14 +4,16 @@ main {
     padding: 0px;
     width: 100%;
     overflow: auto;
-    min-height: 1000px;
+    min-height: 800px;
 }
 .app-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 100%;
+    margin: 0px;
+    padding-top: 0px;
+    overflow: hidden;
 }
 html, body { 
     background-color: white;
