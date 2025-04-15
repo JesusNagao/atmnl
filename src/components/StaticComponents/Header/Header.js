@@ -32,7 +32,7 @@ export default function Header() {
         <nav className="header-nav">
           <Link to="/federacion" className={location.pathname === '/federacion' ? 'Nav active' : 'Nav'}>Federación</Link>
           <Link to="/calendario" className={location.pathname === '/calendario' ? 'Nav active' : 'Nav'}>Calendario</Link>
-          <Link to="/ranking-selection" className={location.pathname === '/ranking' ? 'Nav active' : 'Nav'}>Ranking</Link>
+          <Link to="/ranking-selection" className={location.pathname === '/ranking-selection' ? 'Nav active' : 'Nav'}>Ranking</Link>
         </nav>
       </div>
     </header>

@@ -412,8 +412,6 @@ export default function RankingsPage() {
           </div>
         </div>
       </main>
-      
-      <Footer />
     </div>
   );
 }
