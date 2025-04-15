@@ -1,6 +1,6 @@
 /* General Header wrapper */
 .Header {
-    position: relative;
+    position: fixed;
     width: 100%;
     z-index: 10;
     top: 0;

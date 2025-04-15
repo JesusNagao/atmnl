@@ -1,0 +1,278 @@
+.landing-page {
+  min-height:30vh;
+  background-color: #f5f7fa;
+  padding-bottom: 4rem;
+}
+
+.landing-main {
+  padding-top: 2rem;
+}
+
+.container-principal {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.seccion-hero {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.titulo-hero {
+  font-size: 2.5rem;
+  color: #2a4382;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.subtitulo-hero {
+  font-size: 1.25rem;
+  color: #5e6c84;
+}
+
+.opciones-ranking {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.tarjeta-ranking {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  background: #fff;
+  flex: 1;
+  width: 50%;
+  height: 500px;
+}
+
+.tarjeta-ranking:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+.imagen-tarjeta-container {
+  position: relative;
+  overflow: hidden;
+  height: 85%;
+  transition: height 0.4s ease;
+}
+
+.tarjeta-ranking:hover .imagen-tarjeta-container {
+  height: 50%;
+}
+.titulo-tarjeta-container {
+  position: absolute;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.imagen-tarjeta {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.tarjeta-ranking:hover .imagen-tarjeta {
+  transform: scale(1.05);
+}
+
+.overlay-tarjeta {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 70%);
+}
+
+.contenido-tarjeta {
+  position: relative;
+  height: 25%;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(90deg, rgba(42,67,130,0.95) 0%, rgba(21,34,65,0.95) 100%);
+  color: white;
+  z-index: 2;
+  transition: height 0.4s ease;
+  overflow: hidden;
+}
+
+.tarjeta-ranking:hover .contenido-tarjeta {
+  height: 90%;
+}
+
+.icono-tarjeta-container {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  transition: transform 0.3s ease, margin-bottom 0.3s ease;
+}
+
+.tarjeta-ranking:hover .icono-tarjeta-container {
+  transform: scale(0.8);
+  margin-bottom: 0.5rem;
+}
+
+.icono-tarjeta-container.nacional {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.icono-tarjeta-container.borregos {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.icono-tarjeta {
+  width: 25px;
+  height: 25px;
+  color: white;
+}
+
+.titulo-tarjeta {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  color: white;
+  transition: font-size 0.3s ease, margin-bottom 0.3s ease;
+}
+
+.tarjeta-ranking:hover .titulo-tarjeta {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.contenido-hover {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  height: 0;
+  overflow: hidden;
+}
+
+.tarjeta-ranking:hover .contenido-hover {
+  opacity: 1;
+  transform: translateY(0);
+  height: auto;
+}
+
+.descripcion-tarjeta {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}
+
+.info-tarjeta {
+  margin-bottom: 1rem;
+}
+
+.caracteristicas-tarjeta {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.caracteristica {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.35rem;
+  font-size: 0.85rem;
+  opacity: 0.8;
+}
+
+.caracteristica:before {
+  content: "•";
+  margin-right: 0.5rem;
+  color: #fff;
+}
+
+.accion-tarjeta {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.texto-boton {
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.icono-accion-tarjeta {
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-ranking:hover .icono-accion-tarjeta {
+  transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .opciones-ranking {
+    flex-direction: column;
+  }
+  
+  .tarjeta-ranking {
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+  }
+  
+  .imagen-tarjeta-container {
+    height: 250px;
+  }
+  
+  .tarjeta-ranking:hover .imagen-tarjeta-container {
+    height: 180px;
+  }
+  
+  .contenido-tarjeta {
+    height: 100px;
+  }
+  
+  .tarjeta-ranking:hover .contenido-tarjeta {
+    height: 220px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-hero {
+    font-size: 1.75rem;
+  }
+  
+  .subtitulo-hero {
+    font-size: 1rem;
+  }
+  
+  .contenido-tarjeta {
+    padding: 1.25rem;
+    height: 90px;
+  }
+  
+  .tarjeta-ranking:hover .contenido-tarjeta {
+    height: 240px;
+  }
+  
+  .imagen-tarjeta-container {
+    height: 180px;
+  }
+  
+  .tarjeta-ranking:hover .imagen-tarjeta-container {
+    height: 150px;
+  }
+}

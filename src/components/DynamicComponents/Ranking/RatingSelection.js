@@ -1,7 +1,7 @@
 import React from 'react';
-import { Award, School, Users, ChevronRight } from 'lucide-react';
+import { Users, School, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import './landing-styles.css';
+import './Selection.css';
 import ImgRnkNac from '../../../assets/Imagenes-SeleccionNacional.jpg';
 import ImgRnkBorregos from '../../../assets/Imagenes_CircuitoBorregos.jpeg';
 
@@ -9,68 +9,76 @@ export default function LandingPage() {
   return (
     <div className="landing-page">
       <main className="landing-main">
-        <div className="max-width-container">
-          <div className="hero-section">
-            <h1 className="hero-title">Table Tennis Rankings</h1>
-            <p className="hero-subtitle">
-              Choose the rating system you want to explore
+        <div className="container-principal">
+          <div className="seccion-hero">
+            <h1 className="titulo-hero">Rankings de Tenis de Mesa</h1>
+            <p className="subtitulo-hero">
+              Elige el sistema de clasificación que deseas explorar
             </p>
           </div>
 
-          <div className="rating-options">
-            <Link to="/ranking" className="rating-card">
-              <div className="rating-card-content">
-                <div className="rating-card-icon-container national">
-                  <Users className="rating-card-icon" />
+          <div className="opciones-ranking">
+            <Link to="/ranking" className="tarjeta-ranking">
+              <div className="imagen-tarjeta-container">
+                <img src={ImgRnkNac} alt="Ranking Nacional" className="imagen-tarjeta" />
+                <div className="overlay-tarjeta"></div>
+              </div>
+              
+              <div className="contenido-tarjeta">
+                <div className="icono-tarjeta-container nacional">
+                  <Users className="icono-tarjeta" />
                 </div>
-                <div className="rating-card-text">
-                  <h2 className="rating-card-title">National Rating</h2>
-                  <p className="rating-card-description">
-                    View the official national rankings for all categories across Mexico
+                
+                <h2 className="titulo-tarjeta">Ranking Nacional</h2>
+                
+                <div className="contenido-hover">
+                  <p className="descripcion-tarjeta">
+                    Consulta los rankings oficiales nacionales para todas las categorías en México
                   </p>
-                  <div className="rating-card-info">
-                    <ul className="rating-card-features">
-                      <li className="rating-card-feature">Updated monthly</li>
-                      <li className="rating-card-feature">All age categories</li>
-                      <li className="rating-card-feature">Men's and Women's divisions</li>
+                  <div className="info-tarjeta">
+                    <ul className="caracteristicas-tarjeta">
+                      <li className="caracteristica">Actualizado mensualmente</li>
+                      <li className="caracteristica">Todas las categorías de edad</li>
+                      <li className="caracteristica">Divisiones masculinas y femeninas</li>
                     </ul>
                   </div>
-                  <div className="rating-card-action">
-                    <span className="button-text">View National Rankings</span>
-                    <ChevronRight className="rating-card-action-icon" />
+                  <div className="accion-tarjeta">
+                    <span className="texto-boton">Ver Rankings Nacionales</span>
+                    <ChevronRight className="icono-accion-tarjeta" />
                   </div>
                 </div>
-              </div>
-              <div className="rating-card-image-container">
-                <img src={ImgRnkNac} alt="National Rating" className="rating-card-image" />
               </div>
             </Link>
 
-            <Link to="/ranking" className="rating-card">
-              <div className="rating-card-content">
-                <div className="rating-card-icon-container borregos">
-                  <School className="rating-card-icon" />
+            <Link to="/ranking" className="tarjeta-ranking">
+              <div className="imagen-tarjeta-container">
+                <img src={ImgRnkBorregos} alt="Circuito Borregos" className="imagen-tarjeta" />
+                <div className="overlay-tarjeta"></div>
+              </div>
+              
+              <div className="contenido-tarjeta">
+                <div className="icono-tarjeta-container borregos">
+                  <School className="icono-tarjeta" />
                 </div>
-                <div className="rating-card-text">
-                  <h2 className="rating-card-title">Circuito Borregos Rating</h2>
-                  <p className="rating-card-description">
-                    Explore the collegiate tournament circuit rankings and statistics
+                
+                <h2 className="titulo-tarjeta">Ranking Circuito Borregos</h2>
+                
+                <div className="contenido-hover">
+                  <p className="descripcion-tarjeta">
+                    Explora los rankings y estadísticas del circuito de torneos universitarios
                   </p>
-                  <div className="rating-card-info">
-                    <ul className="rating-card-features">
-                      <li className="rating-card-feature">Tournament-based rankings</li>
-                      <li className="rating-card-feature">University and college players</li>
-                      <li className="rating-card-feature">Seasonal data available</li>
+                  <div className="info-tarjeta">
+                    <ul className="caracteristicas-tarjeta">
+                      <li className="caracteristica">Rankings basados en torneos</li>
+                      <li className="caracteristica">Jugadores universitarios</li>
+                      <li className="caracteristica">Datos disponibles por temporada</li>
                     </ul>
                   </div>
-                  <div className="rating-card-action">
-                    <span className="button-text">View Circuito Borregos Rankings</span>
-                    <ChevronRight className="rating-card-action-icon" />
+                  <div className="accion-tarjeta">
+                    <span className="texto-boton">Ver Rankings Circuito Borregos</span>
+                    <ChevronRight className="icono-accion-tarjeta" />
                   </div>
                 </div>
-              </div>
-              <div className="rating-card-image-container">
-                <img src={ImgRnkBorregos} alt="Circuito Borregos Rating" className="rating-card-image" />
               </div>
             </Link>
           </div>
