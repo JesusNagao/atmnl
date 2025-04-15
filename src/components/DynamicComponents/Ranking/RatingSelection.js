@@ -70,7 +70,7 @@ export default function LandingPage() {
                   <div className="info-tarjeta">
                     <ul className="caracteristicas-tarjeta">
                       <li className="caracteristica">Rankings basados en torneos</li>
-                      <li className="caracteristica">Jugadores universitarios</li>
+                      <li className="caracteristica">Categorías para todos los jugadores.</li>
                       <li className="caracteristica">Datos disponibles por temporada</li>
                     </ul>
                   </div>
