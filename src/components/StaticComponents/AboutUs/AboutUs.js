@@ -10,56 +10,58 @@ export default function AboutUs() {
 
   // Datos del equipo (a futuro irían en una base de datos)
   const team = [
-    {
-      id: 1,
-      name: 'Lic. Gerardo Ramón Panes Morales',
-      position: 'Presidente',
-      description: 'Líder de la asociación con más de 10 años de experiencia en tenis de mesa y entrenador profesional de Tenis de Mesa.',
-      image: Presidente
-    },
-    {
-      id: 2,
-      name: 'Andrés Eduardo Moreira Lee',
-      position: 'Vicepresidente',
-      description: 'Coordinador de torneos regionales.',
-      image: Vicepresidente
-    },
-    {
-      id: 3,
-      name: 'Lic. Rafael Rodriguez Meza',
-      position: 'Tesorero',
-      description: 'Encargado de finanzas y patrocinios para la asociación.',
-      image: '/api/placeholder/300/300'
-    },
-    {
-      id: 4,
-      name: 'Ing. Brandon Hernández Bonilla',
-      position: 'Secretario',
-      description: 'Gestiona la comunicación y documentación oficial.',
-      image: '/api/placeholder/300/300'
-    },
-    {
-      id: 5,
-      name: 'Roberto Garza',
-      position: '',
-      description: 'Responsable del desarrollo técnico de jugadores y entrenadores.',
-      image: '/api/placeholder/300/300'
-    },
-    {
-      id: 6,
-      name: 'Ing. Jesus Leobardo Nagao Álvarez',
-      position: 'Vocal Deportivo',
-      description: 'Representante deportivo del consejo, encargado de hablar, escuchar, y mejorar a base de conversaciones con los deportistas. Es el representante que nos ayuda a saber los problemas de aquellos anexados con la asociación.',
-      image: VocalDeportivo
-    },
-    {
-      id: 7,
-      name: 'Fernando Torres',
-      position: 'Relaciones Públicas',
-      description: 'Maneja la presencia mediática y relaciones institucionales.',
-      image: '/api/placeholder/300/300'
-    }
-  ];
+    
+  {
+    id: 1,
+    name: 'Lic. Gerardo Ramón Panes Morales',
+    position: 'Presidente',
+    description: 'Máxima autoridad de la asociación, responsable de liderar, representar y coordinar las actividades generales. Cuenta con más de 10 años de experiencia como entrenador profesional y promotor del tenis de mesa en Nuevo León.',
+    image: Presidente
+  },
+  {
+    id: 2,
+    name: 'Andrés Eduardo Moreira Lee',
+    position: 'Vicepresidente',
+    description: 'Encargado de la coordinación operativa y logística de la asociación. Lidera la organización de torneos regionales y apoya en la toma de decisiones estratégicas junto al presidente.',
+    image: Vicepresidente
+  },
+  {
+    id: 3,
+    name: 'Lic. Rafael Rodriguez Meza',
+    position: 'Secretario',
+    description: 'Responsable de la documentación oficial, redacción de actas, correspondencia y manejo de la comunicación institucional. Garantiza el orden administrativo de la asociación.',
+    image: '/api/placeholder/300/300'
+  },
+  {
+    id: 4,
+    name: 'Lic. Carlos Eduardo Vargas Barajas',
+    position: 'Tesorero',
+    description: 'Encargado de la gestión financiera, control de presupuestos y administración de recursos económicos. Supervisa los ingresos y egresos para asegurar la transparencia y sostenibilidad económica.',
+    image: '/api/placeholder/300/300'
+  },
+  {
+    id: 5,
+    name: 'Lic. Alberto Yaret Martinez Patiño',
+    position: 'Vocal de Consejo',
+    description: 'Miembro del consejo directivo que participa en la toma de decisiones. Canaliza propuestas y observaciones administrativas para fortalecer el funcionamiento de la asociación.',
+    image: '/api/placeholder/300/300'
+  },
+  {
+    id: 6,
+    name: 'Ing. Jesus Leobardo Nagao Álvarez',
+    position: 'Vocal Deportivo',
+    description: 'Representante de los atletas ante el consejo. Recoge inquietudes, propuestas y necesidades de los deportistas para contribuir a la mejora continua de las actividades deportivas.',
+    image: VocalDeportivo
+  },
+  {
+    id: 7,
+    name: 'Ing. Brandon Hernández Bonilla',
+    position: 'Comisario',
+    description: 'Responsable de la vigilancia y control de los procesos internos de la asociación. Supervisa que los eventos y actividades se desarrollen conforme a los reglamentos y principios establecidos.',
+    image: '/api/placeholder/300/300'
+  }
+];
+
 
   return (
     <div className="about-container">
