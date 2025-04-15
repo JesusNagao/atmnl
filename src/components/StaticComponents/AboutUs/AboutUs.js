@@ -4,6 +4,7 @@ import Presidente from '../../../assets/About Us/Panes.jpg';
 import Vicepresidente from '../../../assets/About Us/Andrew.jpg'; 
 import VocalDeportivo from '../../../assets/About Us/Nagao.jpg'; 
 import { Link, useLocation } from 'react-router-dom';
+import IntroBanner from '../../DynamicComponents/IntroBanner/IntroBanner';
 
 export default function AboutUs() {
   const [activeTab, setActiveTab] = useState('team');
@@ -64,21 +65,7 @@ export default function AboutUs() {
   return (
     <div className="about-container">
       {/* Banner con título superpuesto */}
-      <div className="about-banner">
-        <img 
-          className="about-banner-image" 
-          src="./images/Care-Image.jpeg" 
-          alt="Tenis de Mesa NL" 
-        />
-        <div className="about-banner-overlay">
-          <h1>SOBRE NOSOTROS</h1>
-        </div>
-      </div>
-      
-      {/* Navegación tipo breadcrumb */}
-      <div className="breadcrumb">
-        <Link to="/">Página de inicio</Link> &gt; <span className="current-page">Sobre Nosotros</span>
-      </div>
+      <IntroBanner />
 
       <div className="about-content">
         <div className="about-intro">

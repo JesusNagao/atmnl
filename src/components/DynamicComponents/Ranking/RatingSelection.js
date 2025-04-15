@@ -1,4 +1,5 @@
 import React from 'react';
+import IntroBanner from '../IntroBanner/IntroBanner';
 import { Users, School, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import './Selection.css';
@@ -8,14 +9,9 @@ import ImgRnkBorregos from '../../../assets/Imagenes_CircuitoBorregos.jpeg';
 export default function LandingPage() {
   return (
     <div className="landing-page">
+      <IntroBanner />
       <main className="landing-main">
         <div className="container-principal">
-          <div className="seccion-hero">
-            <h1 className="titulo-hero">Rankings de Tenis de Mesa</h1>
-            <p className="subtitulo-hero">
-              Elige el sistema de clasificación que deseas explorar
-            </p>
-          </div>
 
           <div className="opciones-ranking">
             <Link to="/ranking" className="tarjeta-ranking">
@@ -23,14 +19,13 @@ export default function LandingPage() {
                 <img src={ImgRnkNac} alt="Ranking Nacional" className="imagen-tarjeta" />
                 <div className="overlay-tarjeta"></div>
               </div>
-              
+
               <div className="contenido-tarjeta">
-                <div className="icono-tarjeta-container nacional">
-                  <Users className="icono-tarjeta" />
-                </div>
-                
-                <h2 className="titulo-tarjeta">Ranking Nacional</h2>
-                
+                <h2 className="titulo-tarjeta">
+                  <Users className="icono-tarjeta-inline" />
+                  Ranking Nacional
+                </h2>
+
                 <div className="contenido-hover">
                   <p className="descripcion-tarjeta">
                     Consulta los rankings oficiales nacionales para todas las categorías en México
@@ -55,14 +50,13 @@ export default function LandingPage() {
                 <img src={ImgRnkBorregos} alt="Circuito Borregos" className="imagen-tarjeta" />
                 <div className="overlay-tarjeta"></div>
               </div>
-              
+
               <div className="contenido-tarjeta">
-                <div className="icono-tarjeta-container borregos">
-                  <School className="icono-tarjeta" />
-                </div>
-                
-                <h2 className="titulo-tarjeta">Ranking Circuito Borregos</h2>
-                
+                <h2 className="titulo-tarjeta">
+                  <School className="icono-tarjeta-inline" />
+                  Ranking Circuito Borregos
+                </h2>
+
                 <div className="contenido-hover">
                   <p className="descripcion-tarjeta">
                     Explora los rankings y estadísticas del circuito de torneos universitarios
@@ -70,7 +64,7 @@ export default function LandingPage() {
                   <div className="info-tarjeta">
                     <ul className="caracteristicas-tarjeta">
                       <li className="caracteristica">Rankings basados en torneos</li>
-                      <li className="caracteristica">Categorías para todos los jugadores.</li>
+                      <li className="caracteristica">Categorías para todos los jugadores</li>
                       <li className="caracteristica">Datos disponibles por temporada</li>
                     </ul>
                   </div>

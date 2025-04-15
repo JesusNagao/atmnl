@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowUp, ArrowDown, Minus, Star, Calendar, Award, Users, Info, Bell, Home, ChevronLeft } from 'lucide-react';
 import './Ranking.css';
 import { getRankingsData, getNewsItems, getFeaturedPlayer } from './data-service.js';
-
+import IntroBanner from '../IntroBanner/IntroBanner.jsx';
 // Category name formatter
 const formatCategoryName = (category) => {
   return category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');

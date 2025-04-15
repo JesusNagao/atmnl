@@ -2,11 +2,13 @@ import "./MainPage.css"
 import News from '../News/News'
 import Ranking from '../Ranking/Ranking'
 import Videos from '../Videos/Videos'
+import IntroBanner from "../IntroBanner/IntroBanner"
 
 
 export default function MainPage(){
     return(
         <div className="mainpage">
+            <IntroBanner />
             <div className="news">
                 <h1>Ultimas Noticias</h1>
                 <News />

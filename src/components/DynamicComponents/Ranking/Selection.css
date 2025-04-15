@@ -1,11 +1,12 @@
 .landing-page {
   min-height:30vh;
   background-color: #f5f7fa;
-  padding-bottom: 4rem;
+  padding-bottom: 1rem;
+  width: 100%;
 }
 
 .landing-main {
-  padding-top: 2rem;
+  min-height: 200px;
 }
 
 .container-principal {
@@ -28,7 +29,7 @@
 
 .subtitulo-hero {
   font-size: 1.25rem;
-  color: #5e6c84;
+  color: #cad4e4;
 }
 
 .opciones-ranking {
@@ -36,7 +37,8 @@
   flex-direction: row;
   gap: 2rem;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 1400px;
+  max-height: fit-content;
 }
 
 .tarjeta-ranking {
@@ -54,6 +56,12 @@
   height: 500px;
 }
 
+.seccion-hero img {
+  width: 100%;
+  height: inherit;
+  margin: 0 auto;
+}
+
 .tarjeta-ranking:hover {
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
@@ -69,12 +77,14 @@
 .tarjeta-ranking:hover .imagen-tarjeta-container {
   height: 50%;
 }
+
 .titulo-tarjeta-container {
   position: absolute;
   display: inline-flex;
   align-items: center;
   justify-content: center;
 }
+
 .imagen-tarjeta {
   height: 100%;
   width: 100%;
@@ -97,7 +107,7 @@
 
 .contenido-tarjeta {
   position: relative;
-  height: 25%;
+  height: 18%;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -109,12 +119,12 @@
 }
 
 .tarjeta-ranking:hover .contenido-tarjeta {
-  height: 90%;
+  height: 50%;
 }
 
 .icono-tarjeta-container {
   width: 50px;
-  height: 50px;
+  height: 100px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -148,6 +158,8 @@
   margin-bottom: 0;
   color: white;
   transition: font-size 0.3s ease, margin-bottom 0.3s ease;
+  display: flex;
+  align-items: center;
 }
 
 .tarjeta-ranking:hover .titulo-tarjeta {
@@ -226,25 +238,25 @@
   .opciones-ranking {
     flex-direction: column;
   }
-  
+
   .tarjeta-ranking {
     width: 100%;
     height: auto;
     min-height: 400px;
   }
-  
+
   .imagen-tarjeta-container {
     height: 250px;
   }
-  
+
   .tarjeta-ranking:hover .imagen-tarjeta-container {
     height: 180px;
   }
-  
+
   .contenido-tarjeta {
     height: 100px;
   }
-  
+
   .tarjeta-ranking:hover .contenido-tarjeta {
     height: 220px;
   }
@@ -254,25 +266,34 @@
   .titulo-hero {
     font-size: 1.75rem;
   }
-  
+
   .subtitulo-hero {
     font-size: 1rem;
   }
-  
+
   .contenido-tarjeta {
     padding: 1.25rem;
     height: 90px;
   }
-  
+
   .tarjeta-ranking:hover .contenido-tarjeta {
     height: 240px;
   }
-  
+
   .imagen-tarjeta-container {
     height: 180px;
   }
-  
+
   .tarjeta-ranking:hover .imagen-tarjeta-container {
     height: 150px;
   }
+}
+
+/* Íconos embebidos en el título */
+.icono-tarjeta-inline {
+  width: 22px;
+  height: 22px;
+  margin-right: 0.5rem;
+  vertical-align: middle;
+  color: white;
 }
