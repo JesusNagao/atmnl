@@ -205,20 +205,10 @@ export default function AboutUs() {
             )}
 
             {activeTab === 'contact' && (
-              <div className="contact-section">
-                <div className="contact-block main-office">
-                  <h3>Oficina Principal</h3>
-                  <address>
-                    <p>Av. Universidad 123, Col. Centro</p>
-                    <p>Monterrey, Nuevo León, México</p>
-                    <p>C.P. 64000</p>
-                    <p>Teléfono: (81) 1234-5678</p>
-                    <p>Email: <a href="mailto:contacto@tenisdemesanl.mx">contacto@tenisdemesanl.mx</a></p>
-                  </address>
-                </div>
-                
+              <div className="contactus-section">
                 <div className="contact-block hours">
-                  <h3>Horario de Atención</h3>
+                  <h3>Horario de Atención<p>*El tiempo en contestar correspondencia puede variar según el día y hora</p></h3>
+                  
                   <div className="hours-list">
                     <div className="hours-item">
                       <span className="day">Lunes - Viernes:</span>
@@ -234,37 +224,52 @@ export default function AboutUs() {
                     </div>
                   </div>
                 </div>
-                
-                <div className="contact-block social">
-                  <h3>Redes Sociales</h3>
-                  <div className="social-links">
-                    <a href="#" className="social-link facebook">Facebook</a>
-                    <a href="#" className="social-link instagram">Instagram</a>
-                    <a href="#" className="social-link twitter">Twitter</a>
+
+                <div className="contact-form-section">
+                  <div className="contact-form-container">
+                    <h3>Envíanos un Mensaje</h3>
+                    <form className="contact-form">
+                      <div className="form-group">
+                        <label htmlFor="name">Nombre:</label>
+                        <input type="text" id="name" name="name" required />
+                      </div>
+                      <div className="form-group">
+                        <label htmlFor="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+                      </div>
+                      <div className="form-group">
+                        <label htmlFor="subject">Asunto:</label>
+                        <input type="text" id="subject" name="subject" required />
+                      </div>
+                      <div className="form-group">
+                        <label htmlFor="message">Mensaje:</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                      </div>
+                      <button type="submit" className="submit-button">Enviar Mensaje</button>
+                    </form>
                   </div>
                 </div>
-                
-                <div className="contact-form-container">
-                  <h3>Envíanos un Mensaje</h3>
-                  <form className="contact-form">
-                    <div className="form-group">
-                      <label htmlFor="name">Nombre:</label>
-                      <input type="text" id="name" name="name" required />
+
+                <div className="contact-section">
+                  <div className="contact-block main-office">
+                    <h3>Oficina Principal</h3>
+                    <address>
+                      <p>Av. Universidad 123, Col. Centro</p>
+                      <p>Monterrey, Nuevo León, México</p>
+                      <p>C.P. 64000</p>
+                      <p>Teléfono: (81) 1234-5678</p>
+                      <p>Email: <a href="mailto:contacto@tenisdemesanl.mx">contacto@tenisdemesanl.mx</a></p>
+                    </address>
+                  </div>
+                  
+                  <div className="contact-block social">
+                    <h3>Redes Sociales</h3>
+                    <div className="social-links">
+                      <a href="#" className="social-link facebook">Facebook</a>
+                      <a href="#" className="social-link instagram">Instagram</a>
+                      <a href="#" className="social-link twitter">Twitter</a>
                     </div>
-                    <div className="form-group">
-                      <label htmlFor="email">Email:</label>
-                      <input type="email" id="email" name="email" required />
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="subject">Asunto:</label>
-                      <input type="text" id="subject" name="subject" required />
-                    </div>
-                    <div className="form-group">
-                      <label htmlFor="message">Mensaje:</label>
-                      <textarea id="message" name="message" rows="4" required></textarea>
-                    </div>
-                    <button type="submit" className="submit-button">Enviar Mensaje</button>
-                  </form>
+                  </div>
                 </div>
               </div>
             )}
