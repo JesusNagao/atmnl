@@ -1,113 +1,487 @@
-/* AboutUs.css */
+/* AboutUs.css - Rediseñado con inspiración en el diseño sueco */
 
-.container {
-    background-color: #f9fafb;
-    min-height: 100vh;
-    padding: 24px;
-    font-family: sans-serif;
+/* Estilos generales */
+.about-container {
+  width: 100%;
+  font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/* Banner con título superpuesto */
+.about-banner {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.about-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.7);
+}
+
+.about-banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.about-banner-overlay h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Navegación de migas de pan (breadcrumb) */
+.breadcrumb {
+  padding: 15px 20px;
+  background-color: #f1f1f1;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.breadcrumb a {
+  color: #1a4b8c;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.current-page {
+  color: #666;
+  font-weight: 500;
+}
+
+/* Contenido principal */
+.about-content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.about-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.about-intro h2 {
+  font-size: 2rem;
+  color: #1a4b8c;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Pestañas de navegación */
+.tab-container {
+  margin-bottom: 3rem;
+  padding: 0 20px;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab-button {
+  padding: 12px 24px;
+  margin: 0 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-button:hover {
+  color: #1a4b8c;
+}
+
+.tab-button.active {
+  color: #1a4b8c;
+  border-bottom-color: #1a4b8c;
+}
+
+/* Contenedor de contenido de pestañas - mantiene la misma anchura */
+.tab-content {
+  width: 100%;
+  min-height: 500px; /* Set a consistent minimum height */
+  overflow: hidden; /* Prevent content overflow */
+}
+
+/* Sección de equipo */
+.team-section {
+  padding: 20px 0;
+}
+
+.team-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.team-category {
+  margin-bottom: 2rem;
+}
+
+.category-title {
+  background-color: #1a4b8c;
+  color: white;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.team-card {
+  background-color: white;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.team-image-container {
+  height: 250px;
+  overflow: hidden;
+}
+
+.team-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.team-card:hover .team-image-container img {
+  transform: scale(1.05);
+}
+
+.team-info {
+  padding: 1.5rem;
+}
+
+.team-info h4 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1a4b8c;
+  margin: 0 0 0.5rem 0;
+}
+
+.team-position {
+  color: #666;
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin: 0 0 1rem 0;
+}
+
+.team-description {
+  color: #555;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Sección de misión */
+.mission-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.mission-block {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mission-block h3 {
+  color: #1a4b8c;
+  font-size: 1.4rem;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.mission-block p {
+  color: #555;
+  margin: 0;
+}
+
+.mission-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mission-block ul li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.mission-block ul li:last-child {
+  border-bottom: none;
+}
+
+.mission-block ul li span {
+  font-weight: 600;
+  color: #1a4b8c;
+}
+
+/* Sección de contacto */
+.contact-section {
+  /* Removed the redundant max-width and margin settings */
+  padding: 20px 0; /* Match the padding from team-section for consistency */
+}
+
+/* Fila superior de bloques de contacto */
+.contact-top-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 992px) {
+  .contact-top-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-top-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-block {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-block h3 {
+  color: #1a4b8c;
+  font-size: 1.2rem;
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.contact-block address {
+  font-style: normal;
+  color: #555;
+}
+
+.contact-block address p {
+  margin: 0.5rem 0;
+}
+
+.contact-block a {
+  color: #1a4b8c;
+  text-decoration: none;
+}
+
+.contact-block a:hover {
+  text-decoration: underline;
+}
+
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.hours-item {
+  display: flex;
+  justify-content: space-between;
+  color: #555;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.hours-item:last-child {
+  border-bottom: none;
+}
+
+.day {
+  font-weight: 500;
+}
+
+.time {
+  color: #1a4b8c;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: #f1f1f1;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.social-link.facebook:hover {
+  background-color: #3b5998;
+  color: white;
+}
+
+.social-link.instagram:hover {
+  background-color: #e1306c;
+  color: white;
+}
+
+.social-link.twitter:hover {
+  background-color: #1da1f2;
+  color: white;
+}
+
+/* Formulario de contacto */
+.contact-form-container {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group:nth-child(3),
+.form-group:nth-child(4) {
+  grid-column: 1 / -1; /* Ocupa todo el ancho de la cuadrícula del formulario */
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 0.95rem;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #1a4b8c;
+  box-shadow: 0 0 0 2px rgba(26, 75, 140, 0.2);
+}
+
+.submit-button {
+  grid-column: 1 / -1;
+  background-color: #1a4b8c;
+  color: white;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #15407a;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-banner-overlay h1 {
+    font-size: 2.5rem;
   }
   
-  .section {
-    max-width: 1200px;
-    margin: 0 auto;
+  .about-content {
+    padding: 1.5rem;
   }
   
-  .title {
-    text-align: center;
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+  
+  .category-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 576px) {
+  .about-banner {
+    height: 200px;
+  }
+  
+  .about-banner-overlay h1 {
     font-size: 2rem;
-    font-weight: bold;
-    color: #1e3a8a;
-    margin-bottom: 16px;
-  }
-  
-  .subtitle {
-    text-align: center;
-    font-size: 1.1rem;
-    color: #4b5563;
-    margin-bottom: 40px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
   }
   
   .tab-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 24px;
+    flex-direction: column;
+    align-items: center;
   }
   
   .tab-button {
-    padding: 10px 16px;
-    border-radius: 8px;
-    font-weight: 500;
-    background-color: #e5e7eb;
-    color: #374151;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .tab-button:hover {
-    background-color: #d1d5db;
-  }
-  
-  .tab-button.active {
-    background-color: #2563eb;
-    color: white;
-  }
-  
-  .grid {
-    display: grid;
-    gap: 24px;
-  }
-  
-  @media (min-width: 768px) {
-    .grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  }
-  @media (min-width: 1024px) {
-    .grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  .card {
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    overflow: auto;
-    transition: box-shadow 0.3s;
-  }
-  
-  .card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  .card img {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    text-align: center;
+    margin-bottom: 0.5rem;
   }
-  
-  .card-content {
-    padding: 16px;
-  }
-  
-  .card-content h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #1f2937;
-  }
-  
-  .card-content p.position {
-    color: #2563eb;
-    font-weight: 500;
-  }
-  
-  .card-content p.description {
-    color: #4b5563;
-    margin-top: 8px;
-  }
-  
+}

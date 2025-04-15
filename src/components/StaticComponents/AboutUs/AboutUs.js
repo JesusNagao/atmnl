@@ -1,13 +1,14 @@
 import { useState } from 'react';
 import './AboutUs.css';
-import Presidente from '../../../assets/About Us/Panes.jpg'; // Assuming you have a local image for the president
-import Vicepresidente from '../../../assets/About Us/Andrew.jpg'; // Assuming you have a local image for the Vicepresident
-import VocalDeportivo from '../../../assets/About Us/Nagao.jpg'; // Assuming you have a local image for the Athlete Representative
+import Presidente from '../../../assets/About Us/Panes.jpg'; 
+import Vicepresidente from '../../../assets/About Us/Andrew.jpg'; 
+import VocalDeportivo from '../../../assets/About Us/Nagao.jpg'; 
+import { Link, useLocation } from 'react-router-dom';
+
 export default function AboutUs() {
   const [activeTab, setActiveTab] = useState('team');
 
-  // Esto a futuro iría en una base de datos 
-  // this would go on a database in the future
+  // Datos del equipo (a futuro irían en una base de datos)
   const team = [
     {
       id: 1,
@@ -61,17 +62,34 @@ export default function AboutUs() {
   ];
 
   return (
-    <div className="container">
-      <div className="section">
-        <div className="text-center mb-12">
-          <h1 className="title">Asociación de Tenis de Mesa de Nuevo León</h1>
+    <div className="about-container">
+      {/* Banner con título superpuesto */}
+      <div className="about-banner">
+        <img 
+          className="about-banner-image" 
+          src="./images/Care-Image.jpeg" 
+          alt="Tenis de Mesa NL" 
+        />
+        <div className="about-banner-overlay">
+          <h1>SOBRE NOSOTROS</h1>
+        </div>
+      </div>
+      
+      {/* Navegación tipo breadcrumb */}
+      <div className="breadcrumb">
+        <Link to="/">Página de inicio</Link> &gt; <span className="current-page">Sobre Nosotros</span>
+      </div>
+
+      <div className="about-content">
+        <div className="about-intro">
+          <h2>Asociación de Tenis de Mesa de Nuevo León</h2>
           <p className="subtitle">
             Promoviendo el tenis de mesa en Nuevo León desde 2010, nuestra asociación trabaja para desarrollar 
             el talento local y fomentar la práctica de este deporte a todos los niveles.
           </p>
         </div>
 
-        <div className="mb-8">
+        <div className="tab-container">
           <div className="tab-buttons">
             <button 
               onClick={() => setActiveTab('team')} 
@@ -90,72 +108,165 @@ export default function AboutUs() {
             </button>
           </div>
 
-          {activeTab === 'team' && (
-            <div className="grid">
-              {team.map((member) => (
-                <div key={member.id} className="card">
-                  <img src={member.image} alt={member.name} />
-                  <div className="card-content">
-                    <h3>{member.name}</h3>
-                    <p className="position">{member.position}</p>
-                    <p className="description">{member.description}</p>
+          <div className="tab-content">
+            {activeTab === 'team' && (
+              <div className="team-section">
+                <div className="team-categories">
+                  <div className="team-category">
+                    <h3 className="category-title">PERSONAL</h3>
+                    <div className="category-grid">
+                      {team.slice(0, 4).map((member) => (
+                        <div key={member.id} className="team-card">
+                          <div className="team-image-container">
+                            <img src={member.image} alt={member.name} />
+                          </div>
+                          <div className="team-info">
+                            <h4>{member.name}</h4>
+                            <p className="team-position">{member.position}</p>
+                            <p className="team-description">{member.description}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="team-category">
+                    <h3 className="category-title">CAPITANES DE LA CONFEDERACIÓN</h3>
+                    <div className="category-grid">
+                      {team.slice(4, 6).map((member) => (
+                        <div key={member.id} className="team-card">
+                          <div className="team-image-container">
+                            <img src={member.image} alt={member.name} />
+                          </div>
+                          <div className="team-info">
+                            <h4>{member.name}</h4>
+                            <p className="team-position">{member.position}</p>
+                            <p className="team-description">{member.description}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                  
+                  <div className="team-category">
+                    <h3 className="category-title">JUNTA</h3>
+                    <div className="category-grid">
+                      {team.slice(6).map((member) => (
+                        <div key={member.id} className="team-card">
+                          <div className="team-image-container">
+                            <img src={member.image} alt={member.name} />
+                          </div>
+                          <div className="team-info">
+                            <h4>{member.name}</h4>
+                            <p className="team-position">{member.position}</p>
+                            <p className="team-description">{member.description}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
-              ))}
-            </div>
-          )}
+              </div>
+            )}
 
-          {activeTab === 'mission' && (
-            <div className="card-content" style={{ background: '#fff', borderRadius: '12px', padding: '24px', boxShadow: '0 2px 6px rgba(0,0,0,0.1)' }}>
-              <div className="mb-8">
-                <h2 className="title" style={{ fontSize: '1.5rem' }}>Nuestra Misión</h2>
-                <p className="description">
-                  Promover y desarrollar el tenis de mesa en Nuevo León, ofreciendo oportunidades de entrenamiento, 
-                  competición y crecimiento para jugadores de todos los niveles, desde principiantes hasta profesionales. 
-                  Trabajamos para elevar el nivel competitivo del estado y posicionarlo como referente nacional en este deporte.
-                </p>
+            {activeTab === 'mission' && (
+              <div className="mission-section">
+                <div className="mission-block">
+                  <h3>Nuestra Misión</h3>
+                  <p>
+                    Promover y desarrollar el tenis de mesa en Nuevo León, ofreciendo oportunidades de entrenamiento, 
+                    competición y crecimiento para jugadores de todos los niveles, desde principiantes hasta profesionales. 
+                    Trabajamos para elevar el nivel competitivo del estado y posicionarlo como referente nacional en este deporte.
+                  </p>
+                </div>
+                
+                <div className="mission-block">
+                  <h3>Nuestra Visión</h3>
+                  <p>
+                    Ser la asociación deportiva líder en Nuevo León, reconocida por su excelencia organizativa, 
+                    formación de talentos y contribución al desarrollo integral de los deportistas. Aspiramos a 
+                    convertir el tenis de mesa en uno de los deportes más practicados en nuestro estado.
+                  </p>
+                </div>
+                
+                <div className="mission-block">
+                  <h3>Nuestros Valores</h3>
+                  <ul>
+                    <li><span>Excelencia:</span> Buscamos la mejora continua en todas nuestras actividades.</li>
+                    <li><span>Inclusión:</span> Promovemos la participación de todos, sin importar edad o nivel.</li>
+                    <li><span>Integridad:</span> Actuamos con honestidad y transparencia en todas nuestras operaciones.</li>
+                    <li><span>Trabajo en equipo:</span> Colaboramos para lograr objetivos comunes.</li>
+                    <li><span>Pasión:</span> Compartimos el amor por el tenis de mesa y lo transmitimos a la comunidad.</li>
+                  </ul>
+                </div>
               </div>
-              <div className="mb-8">
-                <h2 className="title" style={{ fontSize: '1.5rem' }}>Nuestra Visión</h2>
-                <p className="description">
-                  Ser la asociación deportiva líder en Nuevo León, reconocida por su excelencia organizativa, 
-                  formación de talentos y contribución al desarrollo integral de los deportistas. Aspiramos a 
-                  convertir el tenis de mesa en uno de los deportes más practicados en nuestro estado.
-                </p>
-              </div>
-              <div>
-                <h2 className="title" style={{ fontSize: '1.5rem' }}>Nuestros Valores</h2>
-                <ul className="description">
-                  <li><strong>Excelencia:</strong> Buscamos la mejora continua en todas nuestras actividades.</li>
-                  <li><strong>Inclusión:</strong> Promovemos la participación de todos, sin importar edad o nivel.</li>
-                  <li><strong>Integridad:</strong> Actuamos con honestidad y transparencia en todas nuestras operaciones.</li>
-                  <li><strong>Trabajo en equipo:</strong> Colaboramos para lograr objetivos comunes.</li>
-                  <li><strong>Pasión:</strong> Compartimos el amor por el tenis de mesa y lo transmitimos a la comunidad.</li>
-                </ul>
-              </div>
-            </div>
-          )}
+            )}
 
-          {activeTab === 'contact' && (
-            <div className="card-content" style={{ background: '#fff', borderRadius: '12px', padding: '24px', boxShadow: '0 2px 6px rgba(0,0,0,0.1)' }}>
-              <h2 className="title" style={{ fontSize: '1.5rem' }}>Contáctanos</h2>
-              <p><strong>Dirección:</strong> Av. Universidad 123, Col. Centro, Monterrey, Nuevo León, México</p>
-              <p><strong>Teléfono:</strong> (81) 1234-5678</p>
-              <p><strong>Email:</strong> contacto@tenisdemesanl.mx</p>
-              <br />
-              <p><strong>Horario:</strong></p>
-              <ul>
-                <li>Lunes a Viernes: 9:00 AM - 7:00 PM</li>
-                <li>Sábados: 10:00 AM - 2:00 PM</li>
-                <li>Domingos: Cerrado</li>
-              </ul>
-              <br />
-              <p><strong>Síguenos en:</strong></p>
-              <p>
-                <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a>
-              </p>
-            </div>
-          )}
+            {activeTab === 'contact' && (
+              <div className="contact-section">
+                <div className="contact-block main-office">
+                  <h3>Oficina Principal</h3>
+                  <address>
+                    <p>Av. Universidad 123, Col. Centro</p>
+                    <p>Monterrey, Nuevo León, México</p>
+                    <p>C.P. 64000</p>
+                    <p>Teléfono: (81) 1234-5678</p>
+                    <p>Email: <a href="mailto:contacto@tenisdemesanl.mx">contacto@tenisdemesanl.mx</a></p>
+                  </address>
+                </div>
+                
+                <div className="contact-block hours">
+                  <h3>Horario de Atención</h3>
+                  <div className="hours-list">
+                    <div className="hours-item">
+                      <span className="day">Lunes - Viernes:</span>
+                      <span className="time">9:00 AM - 7:00 PM</span>
+                    </div>
+                    <div className="hours-item">
+                      <span className="day">Sábados:</span>
+                      <span className="time">10:00 AM - 2:00 PM</span>
+                    </div>
+                    <div className="hours-item">
+                      <span className="day">Domingos:</span>
+                      <span className="time">Cerrado</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="contact-block social">
+                  <h3>Redes Sociales</h3>
+                  <div className="social-links">
+                    <a href="#" className="social-link facebook">Facebook</a>
+                    <a href="#" className="social-link instagram">Instagram</a>
+                    <a href="#" className="social-link twitter">Twitter</a>
+                  </div>
+                </div>
+                
+                <div className="contact-form-container">
+                  <h3>Envíanos un Mensaje</h3>
+                  <form className="contact-form">
+                    <div className="form-group">
+                      <label htmlFor="name">Nombre:</label>
+                      <input type="text" id="name" name="name" required />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="email">Email:</label>
+                      <input type="email" id="email" name="email" required />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="subject">Asunto:</label>
+                      <input type="text" id="subject" name="subject" required />
+                    </div>
+                    <div className="form-group">
+                      <label htmlFor="message">Mensaje:</label>
+                      <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" className="submit-button">Enviar Mensaje</button>
+                  </form>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

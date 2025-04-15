@@ -1,143 +1,143 @@
-.header {
+/* General Header wrapper */
+.Header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    top: 0;
+  }
+  
+  /* Top header bar */
+  .TopHeader {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #243a5e;
-    color: white;
-}
-.logo {
-    height: 50px;
-    margin-right: 20px;
-}
-
-.title {
-    font-size: 1.5rem;
-    margin: 0;
-}
-.TopHeader {
-    display: flex; /* Esto alinea los elementos hijos en una fila */
-    align-items: center; /* Esto centra los elementos hijos verticalmente */
-    justify-content: start; /* Esto alinea los elementos hijos al inicio de la contenedor */
+    justify-content: space-between;
     position: relative;
     width: 100%;
     background-color: #1a1a1a;
     padding: 0;
-    height: 20px; /* Ten en cuenta que esto podría limitar la altura, haciendo que el contenido se superponga si es más alto */
+    height: 25px;
     z-index: 2;
-
-    @media screen and (max-width:1000px) {
-        display: none;
+  }
+  
+  @media screen and (max-width: 1000px) {
+    .TopHeader {
+      display: none;
     }
-
-}
-.mediaLinks{
-    margin-right: 3rem;
-}
-.icon {
-    max-height: 100%;
-    width: auto; /* La anchura será la del contenido */
-    height: 1.5rch; /* Esto podría hacer que la imagen se desborde de tu .Top-Header debido a su altura fija */
-    align-items: center;
-    border: .3rem solid transparent;
-    padding-top: 0.3rem;
-}
-.iconBtn{
-    width: auto; /* La anchura será la del contenido */
-    height: auto; /* Esto podría hacer que la imagen se desborde de tu .Top-Header debido a su altura fija */
-    margin-top: 1rem;
-    padding: 8px;
-}
-.LowHeader {
-    display: flex;
-    place-items: center;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #2d4062;
-    text-align: center;
-    padding: 10px 0;
-    margin-right: auto; 
-    height: 45px; /*Esto hace que la altura se ajuste al tamaño del contenido*/
-    z-index: 10;
-    /*
-    font-size: 100%;
-    align-self: center;*/
-    
-}
-.LowHeader a .ATMNL_Logo {
-    flex-shrink: 0;
-    padding-left: 3rem;
-    max-width: auto; /* Adjust this value to control the width of the logo */
-    height: inherit; /* This ensures the height adjusts proportionally to the width */
-    align-self: left;
-    @media only screen and (max-width: 1000px) {
-    }
-}
-.LowHeader a 
-{
-    height: inherit;
-}
-.header-nav {
-    margin-left: auto;
+  }
+  
+  .TopHeader h1 {
     color: white;
-    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
-     
-    @media (max-width: 1000px) {
-        display: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.7rem;
+    margin: 0 0 0 3%;
+  }
+  
+  /* Social media section */
+  .mediaLinks {
+    margin-right: 3%;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .icon {
+    height: 15px;
+    width: auto;
+    margin: 0 5px;
+  }
+  
+  .iconBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 3px;
+  }
+  
+  /* Bottom header (main navigation area) */
+  .LowHeader {
+    display: flex;
+    align-items: center;
+    background-color: #2d4062;
+    height: 60px;
+    padding: 0 3%;
+    box-sizing: border-box;
+  }
+  
+  /* Logo wrapper */
+  .logo-link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Logo image */
+  .ATMNL_Logo {
+    max-height: 40px;
+    width: auto;
+    display: block;
+  }
+  
+  /* Navigation bar */
+  .header-nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+  
+  @media (max-width: 1000px) {
+    .header-nav {
+      display: none;
     }
-}
-.Header .LowHeader .header-nav .Nav {
+  }
+  
+  /* Navigation links */
+  .Nav {
     position: relative;
     color: white;
     text-transform: uppercase;
     text-decoration: none;
-    margin-right: 1rem; /* Espacio entre los enlaces*/
+    margin-left: 2rem;
     font-size: 18px;
-    width: 200px;
-}
-
-/* Corregir el pseudoelemento para que tenga dos puntos dobles */
-.Header .LowHeader .header-nav .Nav::before {
+    font-weight: 500;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px 0;
+    letter-spacing: 0.5px;
+  }
+  
+  /* Active link styling */
+  .Nav.active {
+    font-weight: 700;
+  }
+  
+  /* Hover underline animation */
+  .Nav::before {
     position: absolute;
     content: '';
     left: 0;
-    bottom: 0;
-    height: 3px;
+    bottom: -2px;
+    height: 2px;
     width: 100%;
     background: white;
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform .4s linear;
-}
-
-/* Corregir la pseudoclase para que tenga dos puntos y referencie correctamente al pseudoelemento */
-.Header .LowHeader .header-nav .Nav:hover::before {
+    transition: transform 0.3s ease-out;
+  }
+  
+  .Nav:hover::before,
+  .Nav.active::before {
     transform: scaleX(1);
     transform-origin: left;
-}
-
-.Nav {
-    position: relative;
-    color: white;
-    text-transform: uppercase;
-    text-decoration: none;
-    margin-right: 1rem; /* Espacio entre los enlaces*/
-    font-size: 42px;
-    width: 200px;
-}
-    
-.TopHeader h1 {
-    color: white;
-    font-family:Georgia, 'Times New Roman', Times, sans-serif;
-    font-size: .7rem;
-    margin-right: auto;
-    margin-left: 3%; /* Establece un margen uniforme a izquierda y derecha */
-} 
-
-.burger {
+  }
+  
+  /* Burger menu */
+  .burger {
     margin-left: auto;
     padding: 1.5rem;
-    @media only screen and (min-width: 1001px) {
-        display: none;
+  }
+  
+  @media only screen and (min-width: 1001px) {
+    .burger {
+      display: none;
     }
-}
+  }

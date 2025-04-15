@@ -13,7 +13,7 @@ export default function MainPage(){
             </div>
             <div className="ranking">
                 <h1>Ranking</h1>
-                <Ranking />
+                {/*<Ranking />*/}
             </div>
             <div className="videos">
                 <h1>Ultimos Videos</h1>
