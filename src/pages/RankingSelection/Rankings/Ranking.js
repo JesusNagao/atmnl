@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowUp, ArrowDown, Minus, Star, Calendar, Award, Users, Info, Bell, Home, ChevronLeft } from 'lucide-react';
 import 'styles/Ranking.css';
-import { getRankingsData, getNewsItems, getFeaturedPlayer } from 'components/DynamicComponents/Ranking/data-service';
+import IntroBanner from 'components/DynamicComponents/IntroBanner/IntroBanner';
+
 // Category name formatter
 const formatCategoryName = (category) => {
   return category.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
@@ -126,8 +127,8 @@ const FeaturedPlayer = ({ player }) => {
               <span>{player.age}</span>
             </div>
             <div className="player-detail-row">
-              <span className="player-detail-label">Club</span>
-              <span>{player.club}</span>
+              <span className="player-detail-label">{player.regionOrClub ? "Club" : "Region"}</span>
+              <span>{player.regionOrClub || player.region || player.club}</span>
             </div>
             <div className="player-detail-row">
               <span className="player-detail-label">Style</span>
@@ -145,7 +146,7 @@ const FeaturedPlayer = ({ player }) => {
 };
 
 // Ranking Table Component
-const RankingTable = ({ data, title }) => {
+const RankingTable = ({ data, title, isBorregos }) => {
   if (!data || data.length === 0) {
     return (
       <div className="empty-rankings">
@@ -166,8 +167,7 @@ const RankingTable = ({ data, title }) => {
               <th className="table-header-cell">Change</th>
               <th className="table-header-cell">Name</th>
               <th className="table-header-cell">Points</th>
-              <th className="table-header-cell">Tournaments</th>
-              <th className="table-header-cell">Region</th>
+              <th className="table-header-cell">{isBorregos ? "Club" : "Region"}</th>
             </tr>
           </thead>
           <tbody>
@@ -195,8 +195,7 @@ const RankingTable = ({ data, title }) => {
                   </td>
                   <td className="table-cell name">{player.name}</td>
                   <td className="table-cell">{player.points}</td>
-                  <td className="table-cell">{player.tournaments}</td>
-                  <td className="table-cell">{player.region}</td>
+                  <td className="table-cell">{isBorregos ? player.club : player.region}</td>
                 </tr>
               );
             })}
@@ -233,48 +232,66 @@ const TournamentSelector = ({ options, selectedTournament, onChange }) => {
   );
 };
 
-// Footer Component
-const Footer = () => {
-  return (
-    <footer className="footer">
-      <div className="max-width-container">
-        <div className="footer-content">
-          <div className="footer-grid">
-            <div className="footer-section">
-              <h3 className="footer-title">
-                <Award className="footer-title-icon" />
-                Table Tennis Rankings
-              </h3>
-              <p className="footer-description">
-                The most comprehensive and up-to-date table tennis rankings for all categories.
-              </p>
-            </div>
-            <div className="footer-section">
-              <h3 className="footer-title">Quick Links</h3>
-              <ul className="footer-links-list">
-                <li className="footer-link-item"><a href="#" className="footer-link">Rankings</a></li>
-                <li className="footer-link-item"><a href="#" className="footer-link">News</a></li>
-                <li className="footer-link-item"><a href="#" className="footer-link">Events</a></li>
-                <li className="footer-link-item"><a href="#" className="footer-link">Players</a></li>
-              </ul>
-            </div>
-            <div className="footer-section">
-              <h3 className="footer-title">Connect With Us</h3>
-              <ul className="footer-links-list">
-                <li className="footer-link-item"><a href="#" className="footer-link">Facebook</a></li>
-                <li className="footer-link-item"><a href="#" className="footer-link">Twitter</a></li>
-                <li className="footer-link-item"><a href="#" className="footer-link">Instagram</a></li>
-                <li className="footer-link-item"><a href="#" className="footer-link">Contact Us</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="footer-divider">
-            <p>&copy; 2025 Table Tennis Rankings. All rights reserved.</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
+// Data Service Implementation
+const getRankingsData = async (ratingType) => {
+  try {
+    // Determinar qué archivo JSON cargar basado en el tipo de ranking
+    const jsonFile = ratingType === 'national' 
+      ? '/assets/lib/RankingN-temp.json'
+      : 'assets/lib/RankingCB-temp.json';
+
+    const response = await fetch(jsonFile);
+    if (!response.ok) {
+      throw new Error('Failed to load rankings data');
+    }
+    return await response.json();
+  } catch (error) {
+    console.error('Error loading rankings data:', error);
+    return {};
+  }
+};
+
+const getNewsItems = async () => {
+  try {
+    const response = await fetch('./News-Temp.json');
+    if (!response.ok) {
+      throw new Error('Failed to load news data');
+    }
+    return await response.json();
+  } catch (error) {
+    console.error('Error loading news data:', error);
+    return [];
+  }
+};
+
+const getFeaturedPlayer = async (ratingType, category) => {
+  try {
+    // Cargar datos de ranking
+    const rankings = await getRankingsData(ratingType);
+    
+    // Si no hay datos o la categoría no existe, devolver null
+    if (!rankings || !rankings[category] || rankings[category].length === 0) {
+      return null;
+    }
+    
+    // Seleccionar un jugador al azar de la categoría actual
+    const players = rankings[category];
+    const randomIndex = Math.floor(Math.random() * players.length);
+    const player = players[randomIndex];
+    
+    // Añadir información adicional para el jugador destacado
+    return {
+      ...player,
+      category: formatCategoryName(category),
+      age: Math.floor(Math.random() * 15) + 15, // Edad aleatoria entre 15 y 30
+      style: ["Offensive", "Defensive", "All-around", "Penhold", "Shakehand"][Math.floor(Math.random() * 5)],
+      achievements: ["National Champion 2024", "Regional Winner", "International Competitor", "Olympic Participant", "Junior Champion"][Math.floor(Math.random() * 5)],
+      regionOrClub: ratingType === 'national' ? player.region : player.club
+    };
+  } catch (error) {
+    console.error('Error loading featured player:', error);
+    return null;
+  }
 };
 
 // Main Rankings Page Component
@@ -287,19 +304,24 @@ export default function RankingsPage() {
   
   // Set appropriate categories based on rating type
   const nationalCategories = [
-    "mens-national", 
-    "womens-national", 
-    "mens-sub-19", 
-    "womens-sub-19", 
-    "mens-sub-15", 
-    "womens-sub-15"
+    "varonil", 
+    "femenil", 
+    "sub-19-varonil", 
+    "sub-19-femenil", 
+    "sub-15-varonil", 
+    "sub-15-femenil",
+    "sub-13-varonil",
+    "sub-13-femenil",
+    "sub-11-varonil",
+    "sub-11-femenil"
   ];
   
   const borregosCategories = [
-    "mens-college", 
-    "womens-college", 
-    "mens-junior", 
-    "womens-junior"
+    "1ra-division", 
+    "2da-division", 
+    "3ra-division", 
+    "4ta-division",
+    "5ta-division"
   ];
   
   const categories = isNational ? nationalCategories : borregosCategories;
@@ -324,12 +346,13 @@ export default function RankingsPage() {
       try {
         // Fetch data using the data service
         const rankings = await getRankingsData(ratingType);
-        const news = await getNewsItems(ratingType);
-        const player = await getFeaturedPlayer(ratingType);
+        const news = await getNewsItems();
         
         setRankingsData(rankings);
         setNewsItems(news);
-        setFeaturedPlayer(player);
+        
+        // Resetear la categoría activa cuando cambia el tipo de rating
+        setActiveCategory(isNational ? nationalCategories[0] : borregosCategories[0]);
       } catch (error) {
         console.error("Error fetching data:", error);
       } finally {
@@ -338,7 +361,19 @@ export default function RankingsPage() {
     };
     
     fetchData();
-  }, [ratingType]);
+  }, [ratingType, isNational]);
+  
+  // Efecto separado para el jugador destacado que depende de activeCategory
+  useEffect(() => {
+    const loadFeaturedPlayer = async () => {
+      if (activeCategory) {
+        const player = await getFeaturedPlayer(ratingType, activeCategory);
+        setFeaturedPlayer(player);
+      }
+    };
+    
+    loadFeaturedPlayer();
+  }, [activeCategory, ratingType]);
   
   // Handle back to selection
   const handleBackToSelection = () => {
@@ -347,6 +382,7 @@ export default function RankingsPage() {
 
   return (
     <div className="app">
+      <IntroBanner />
       <header className="rankings-header">
         <div className="max-width-container">
           <div className="header-content">
@@ -392,7 +428,8 @@ export default function RankingsPage() {
               ) : (
                 <RankingTable 
                   data={rankingsData[activeCategory]} 
-                  title={formatCategoryName(activeCategory)} 
+                  title={formatCategoryName(activeCategory)}
+                  isBorregos={isBorregos}
                 />
               )}
             </div>
