@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import './AboutUs.css';
-import Presidente from '../../../assets/About Us/Panes.jpg'; 
-import Vicepresidente from '../../../assets/About Us/Andrew.jpg'; 
-import VocalDeportivo from '../../../assets/About Us/Nagao.jpg'; 
+import 'styles/AboutUs.css';
+import Presidente from 'assets/About Us/Panes.jpg'; 
+import Vicepresidente from 'assets/About Us/Andrew.jpg'; 
+import VocalDeportivo from 'assets/About Us/Nagao.jpg'; 
 import { Link, useLocation } from 'react-router-dom';
-import IntroBanner from '../../DynamicComponents/IntroBanner/IntroBanner';
+import IntroBanner from 'components/DynamicComponents/IntroBanner/IntroBanner';
 
 export default function AboutUs() {
   const [activeTab, setActiveTab] = useState('team');
