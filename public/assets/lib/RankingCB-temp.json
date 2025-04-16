@@ -1,0 +1,610 @@
+{
+    "varonil": [
+      {
+        "rank": 1,
+        "change": 0,
+        "name": "Carlos Rodríguez",
+        "points": 2450,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 2,
+        "change": 1,
+        "name": "Fernando García",
+        "points": 2320,
+        "region": "Nuevo León"
+      },
+      {
+        "rank": 3,
+        "change": 1,
+        "name": "Javier López",
+        "points": 2210,
+        "region": "Jalisco"
+      },
+      {
+        "rank": 4,
+        "change": -2,
+        "name": "Alejandro Martínez",
+        "points": 2180,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 5,
+        "change": 0,
+        "name": "Miguel Ángel Sánchez",
+        "points": 2105,
+        "region": "Puebla"
+      },
+      {
+        "rank": 6,
+        "change": 2,
+        "name": "Ricardo Torres",
+        "points": 2080,
+        "region": "Nuevo León"
+      },
+      {
+        "rank": 7,
+        "change": 0,
+        "name": "Daniel Ortiz",
+        "points": 2050,
+        "region": "Guadalajara"
+      },
+      {
+        "rank": 8,
+        "change": -1,
+        "name": "Eduardo Vázquez",
+        "points": 1950,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 9,
+        "change": -1,
+        "name": "Jorge Hernández",
+        "points": 1920,
+        "region": "Monterrey"
+      },
+      {
+        "rank": 10,
+        "change": 0,
+        "name": "Luis Ramírez",
+        "points": 1870,
+        "region": "Querétaro"
+      }
+    ],
+    "femenil": [
+      {
+        "rank": 1,
+        "change": 0,
+        "name": "Ana María Fernández",
+        "points": 2350,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 2,
+        "change": 0,
+        "name": "Sofía Hernández",
+        "points": 2280,
+        "region": "Nuevo León"
+      },
+      {
+        "rank": 3,
+        "change": 2,
+        "name": "Carmen González",
+        "points": 2210,
+        "region": "Guadalajara"
+      },
+      {
+        "rank": 4,
+        "change": -1,
+        "name": "Lucía Torres",
+        "points": 2160,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 5,
+        "change": -1,
+        "name": "Patricia López",
+        "points": 2115,
+        "region": "Monterrey"
+      },
+      {
+        "rank": 6,
+        "change": 1,
+        "name": "Gabriela Ramírez",
+        "points": 2050,
+        "region": "Puebla"
+      },
+      {
+        "rank": 7,
+        "change": -1,
+        "name": "Mariana Sánchez",
+        "points": 2010,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 8,
+        "change": 2,
+        "name": "Daniela Ortiz",
+        "points": 1980,
+        "region": "Guadalajara"
+      },
+      {
+        "rank": 9,
+        "change": 0,
+        "name": "Verónica Martínez",
+        "points": 1910,
+        "region": "Puebla"
+      },
+      {
+        "rank": 10,
+        "change": 1,
+        "name": "Laura Gómez",
+        "points": 1850,
+        "region": "Monterrey"
+      }
+    ],
+    "sub-19-varonil": [
+      {
+        "rank": 1,
+        "change": 0,
+        "name": "Juan Pablo Méndez",
+        "points": 2250,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 2,
+        "change": 1,
+        "name": "Roberto Guzmán",
+        "points": 2180,
+        "region": "Jalisco"
+      },
+      {
+        "rank": 3,
+        "change": 1,
+        "name": "Andrés Luna",
+        "points": 2120,
+        "region": "Monterrey"
+      },
+      {
+        "rank": 4,
+        "change": -2,
+        "name": "Diego Flores",
+        "points": 2090,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 5,
+        "change": 0,
+        "name": "Santiago Vargas",
+        "points": 2050,
+        "region": "Querétaro"
+      },
+      {
+        "rank": 6,
+        "change": 2,
+        "name": "Emiliano Castro",
+        "points": 1980,
+        "region": "Puebla"
+      },
+      {
+        "rank": 7,
+        "change": 0,
+        "name": "Rafael Medina",
+        "points": 1950,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 8,
+        "change": -2,
+        "name": "Francisco Rivas",
+        "points": 1880,
+        "region": "Nuevo León"
+      }
+    ],
+    "sub-19-femenil": [
+      {
+        "rank": 1,
+        "change": 0,
+        "name": "Paula Jiménez",
+        "points": 2200,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 2,
+        "change": 0,
+        "name": "Valeria Morales",
+        "points": 2150,
+        "region": "Nuevo León"
+      },
+      {
+        "rank": 3,
+        "change": 2,
+        "name": "Regina Campos",
+        "points": 2080,
+        "region": "Guadalajara"
+      },
+      {
+        "rank": 4,
+        "change": -1,
+        "name": "Isabella Vega",
+        "points": 2040,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 5,
+        "change": -1,
+        "name": "Natalia Orozco",
+        "points": 1990,
+        "region": "Monterrey"
+      },
+      {
+        "rank": 6,
+        "change": 0,
+        "name": "Renata Soto",
+        "points": 1950,
+        "region": "Jalisco"
+      },
+      {
+        "rank": 7,
+        "change": 1,
+        "name": "Miranda Cruz",
+        "points": 1910,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 8,
+        "change": -1,
+        "name": "Carolina Ríos",
+        "points": 1850,
+        "region": "Puebla"
+      }
+    ],
+    "sub-15-varonil": [
+      {
+        "rank": 1,
+        "change": 0,
+        "name": "Mateo Navarro",
+        "points": 2100,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 2,
+        "change": 1,
+        "name": "Leonel Gutiérrez",
+        "points": 2050,
+        "region": "Monterrey"
+      },
+      {
+        "rank": 3,
+        "change": 1,
+        "name": "Héctor Villegas",
+        "points": 1980,
+        "region": "Guadalajara"
+      },
+      {
+        "rank": 4,
+        "change": -2,
+        "name": "Axel Paredes",
+        "points": 1940,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 5,
+        "change": 0,
+        "name": "Bruno Rojas",
+        "points": 1880,
+        "region": "Jalisco"
+      },
+      {
+        "rank": 6,
+        "change": 2,
+        "name": "Samuel Cordero",
+        "points": 1850,
+        "region": "Puebla"
+      },
+      {
+        "rank": 7,
+        "change": -1,
+        "name": "Nicolás Ponce",
+        "points": 1810,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 8,
+        "change": -1,
+        "name": "Dante Mendoza",
+        "points": 1780,
+        "region": "Nuevo León"
+      }
+    ],
+    "sub-15-femenil": [
+      {
+        "rank": 1,
+        "change": 0,
+        "name": "Camila Duarte",
+        "points": 2080,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 2,
+        "change": 0,
+        "name": "Victoria Escobar",
+        "points": 2020,
+        "region": "Nuevo León"
+      },
+      {
+        "rank": 3,
+        "change": 1,
+        "name": "Alejandra Sosa",
+        "points": 1950,
+        "region": "Guadalajara"
+      },
+      {
+        "rank": 4,
+        "change": -1,
+        "name": "Elena Herrera",
+        "points": 1920,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 5,
+        "change": 0,
+        "name": "Melissa Acosta",
+        "points": 1880,
+        "region": "Puebla"
+      },
+      {
+        "rank": 6,
+        "change": 2,
+        "name": "Jimena Valencia",
+        "points": 1840,
+        "region": "Guadalajara"
+      },
+      {
+        "rank": 7,
+        "change": -1,
+        "name": "Diana Castro",
+        "points": 1800,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 8,
+        "change": -1,
+        "name": "Fernanda Benítez",
+        "points": 1760,
+        "region": "Monterrey"
+      }
+    ],
+    "sub-13-varonil": [
+      {
+        "rank": 1,
+        "change": 0,
+        "name": "Marco Torres",
+        "points": 1980,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 2,
+        "change": 1,
+        "name": "Dylan Castillo",
+        "points": 1920,
+        "region": "Nuevo León"
+      },
+      {
+        "rank": 3,
+        "change": 1,
+        "name": "Iker Moreno",
+        "points": 1850,
+        "region": "Jalisco"
+      },
+      {
+        "rank": 4,
+        "change": -2,
+        "name": "Joel Pacheco",
+        "points": 1820,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 5,
+        "change": 0,
+        "name": "Adrián Contreras",
+        "points": 1780,
+        "region": "Puebla"
+      },
+      {
+        "rank": 6,
+        "change": 1,
+        "name": "Leonardo Aguilar",
+        "points": 1750,
+        "region": "Guadalajara"
+      },
+      {
+        "rank": 7,
+        "change": -1,
+        "name": "Emilio Vidal",
+        "points": 1710,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 8,
+        "change": 0,
+        "name": "Arturo Pineda",
+        "points": 1670,
+        "region": "Monterrey"
+      }
+    ],
+    "sub-13-femenil": [
+      {
+        "rank": 1,
+        "change": 0,
+        "name": "Valentina Robles",
+        "points": 1950,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 2,
+        "change": 0,
+        "name": "Julia Montes",
+        "points": 1890,
+        "region": "Nuevo León"
+      },
+      {
+        "rank": 3,
+        "change": 2,
+        "name": "Sofía Camacho",
+        "points": 1840,
+        "region": "Guadalajara"
+      },
+      {
+        "rank": 4,
+        "change": -1,
+        "name": "Ariana Estrada",
+        "points": 1800,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 5,
+        "change": -1,
+        "name": "Montserrat Solís",
+        "points": 1760,
+        "region": "Puebla"
+      },
+      {
+        "rank": 6,
+        "change": 0,
+        "name": "Danna Varela",
+        "points": 1730,
+        "region": "Monterrey"
+      },
+      {
+        "rank": 7,
+        "change": 1,
+        "name": "Isabella Mora",
+        "points": 1690,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 8,
+        "change": -1,
+        "name": "Ximena Quiroz",
+        "points": 1650,
+        "region": "Jalisco"
+      }
+    ],
+    "sub-11-varonil": [
+      {
+        "rank": 1,
+        "change": 0,
+        "name": "Alejandro Miranda",
+        "points": 1850,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 2,
+        "change": 1,
+        "name": "Sebastián Ochoa",
+        "points": 1800,
+        "region": "Nuevo León"
+      },
+      {
+        "rank": 3,
+        "change": 1,
+        "name": "Damián Nava",
+        "points": 1750,
+        "region": "Jalisco"
+      },
+      {
+        "rank": 4,
+        "change": -2,
+        "name": "Maximiliano Fuentes",
+        "points": 1720,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 5,
+        "change": 0,
+        "name": "Santiago Ramos",
+        "points": 1680,
+        "region": "Monterrey"
+      },
+      {
+        "rank": 6,
+        "change": 2,
+        "name": "Cristian Arellano",
+        "points": 1650,
+        "region": "Puebla"
+      },
+      {
+        "rank": 7,
+        "change": -1,
+        "name": "Diego Cárdenas",
+        "points": 1610,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 8,
+        "change": -1,
+        "name": "Matías Carrillo",
+        "points": 1580,
+        "region": "Guadalajara"
+      }
+    ],
+    "sub-11-femenil": [
+      {
+        "rank": 1,
+        "change": 0,
+        "name": "Renata Valdez",
+        "points": 1820,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 2,
+        "change": 0,
+        "name": "Alondra Mejía",
+        "points": 1780,
+        "region": "Nuevo León"
+      },
+      {
+        "rank": 3,
+        "change": 1,
+        "name": "Valeria Cabrera",
+        "points": 1740,
+        "region": "Jalisco"
+      },
+      {
+        "rank": 4,
+        "change": -1,
+        "name": "Regina Sandoval",
+        "points": 1700,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 5,
+        "change": 0,
+        "name": "Amanda Téllez",
+        "points": 1670,
+        "region": "Puebla"
+      },
+      {
+        "rank": 6,
+        "change": 2,
+        "name": "Paulina Chávez",
+        "points": 1630,
+        "region": "Monterrey"
+      },
+      {
+        "rank": 7,
+        "change": -1,
+        "name": "Natalia Serrano",
+        "points": 1600,
+        "region": "Ciudad de México"
+      },
+      {
+        "rank": 8,
+        "change": -1,
+        "name": "Mariana Delgado",
+        "points": 1570,
+        "region": "Guadalajara"
+      }
+    ]
+}
