@@ -6,7 +6,7 @@ import './Selection.css';
 import ImgRnkNac from '../../../assets/Imagenes-SeleccionNacional.jpg';
 import ImgRnkBorregos from '../../../assets/Imagenes_CircuitoBorregos.jpeg';
 
-export default function LandingPage() {
+export default function RatingSelection() {
   return (
     <div className="landing-page">
       <IntroBanner />
@@ -14,7 +14,7 @@ export default function LandingPage() {
         <div className="container-principal">
 
           <div className="opciones-ranking">
-            <Link to="/ranking" className="tarjeta-ranking">
+            <Link to="/ranking/national" className="tarjeta-ranking">
               <div className="imagen-tarjeta-container">
                 <img src={ImgRnkNac} alt="Ranking Nacional" className="imagen-tarjeta" />
                 <div className="overlay-tarjeta"></div>
@@ -45,7 +45,7 @@ export default function LandingPage() {
               </div>
             </Link>
 
-            <Link to="/ranking" className="tarjeta-ranking">
+            <Link to="/ranking/circuito-borregos" className="tarjeta-ranking">
               <div className="imagen-tarjeta-container">
                 <img src={ImgRnkBorregos} alt="Circuito Borregos" className="imagen-tarjeta" />
                 <div className="overlay-tarjeta"></div>
