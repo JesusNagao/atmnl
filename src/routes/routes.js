@@ -1,8 +1,8 @@
-import Home from '../components/DynamicComponents/Main Page/MainPage';
-import About from '../components/StaticComponents/AboutUs/AboutUs';
-import Events from '../components/StaticComponents/Events/Events';
-import RatingSelection from '../components/DynamicComponents/Ranking/RatingSelection';
-import Ranking from '../components/DynamicComponents/Ranking/Ranking';
+import Home from "pages/MainPage/MainPage.js";
+import About from 'pages/AboutUs/AboutUs.js';
+import Events from 'pages/Events/Events.js';
+import RatingSelection from 'pages/RankingSelection/RankingSelection.js';
+import Ranking from 'pages/RankingSelection/Rankings/Ranking.js';
 
 const routes = [
   { path: '/', name: 'Inicio', element: <Home /> },

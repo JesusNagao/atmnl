@@ -1,10 +1,10 @@
 import React from 'react';
-import IntroBanner from '../IntroBanner/IntroBanner';
+import IntroBanner from 'components/DynamicComponents/IntroBanner/IntroBanner';
 import { Users, School, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import './Selection.css';
-import ImgRnkNac from '../../../assets/Imagenes-SeleccionNacional.jpg';
-import ImgRnkBorregos from '../../../assets/Imagenes_CircuitoBorregos.jpeg';
+import 'styles/RankingSelection.css';
+import ImgRnkNac from 'assets/Imagenes_SeleccionNacional.jpg';
+import ImgRnkBorregos from 'assets/Imagenes_CircuitoBorregos.jpeg';
 
 export default function LandingPage() {
   return (
