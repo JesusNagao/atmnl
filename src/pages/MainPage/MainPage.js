@@ -1,59 +1,61 @@
 // MainPage.jsx
 import React from 'react';
-import "styles/MainPage.css";
 import News from 'components/DynamicComponents/News/News';
 import Ranking from 'components/DynamicComponents/Ranking/Ranking-module';
 import Videos from 'components/DynamicComponents/Videos/Videos';
 import Calendar from 'components/DynamicComponents/Calendar/EventsCalendar';
-//import Contact from 'components/DynamicComponents/Contact/Contact';
+import ContactForm from 'components/StaticComponents/MainPage/ContactForm';
 import IntroBanner from "components/DynamicComponents/IntroBanner/IntroBanner";
-import Footer from "components/StaticComponents/Footer/Footer";
+import "styles/MainPage/MainPage.css";
 
 export default function MainPage() {
   return (
     <div className="mainpage">
       <IntroBanner />
       
-      <div className="container">
-        <section className="section">
-          <div className="section-header">
+      <div className="main-container">
+        
+        {/* Top row - News */}
+        <section className="section news-section">
+        <div className="section-header">
             <h2>Últimas Noticias</h2>
             <a href="/noticias" className="section-view-all">Ver todas</a>
-          </div>
-          <News />
+        </div>
+        <News />
         </section>
         
-        <section className="section">
+        {/* Calendar Section*/}
+    
+        <section className="section calendar-section">
+            <div className="section-header">
+            <h2>Próximos Eventos</h2>
+            <a href="/calendario" className="section-view-all">Ver calendario</a>
+            </div>
+            <Calendar />
+        </section>
+    
+        {/* Videos section */}
+        <section className="section videos-section">
+            <div className="section-header">
+            <h2>Últimos Videos</h2>
+            <a href="/videos" className="section-view-all">Ver todos</a>
+            </div>
+            <Videos />
+        </section>
+        
+        
+
+        {/* Ranking column with ranking table */}
+        <div className="ranking-column">
           <div className="section-header">
             <h2>Ranking</h2>
             <a href="/ranking" className="section-view-all">Ver completo</a>
           </div>
           <Ranking />
-        </section>
-        
-        <section className="section">
-          <div className="section-header">
-            <h2>Próximos Eventos</h2>
-            <a href="/calendario" className="section-view-all">Ver calendario</a>
-          </div>
-          <Calendar />
-        </section>
-        
-        <section className="section">
-          <div className="section-header">
-            <h2>Últimos Videos</h2>
-            <a href="/videos" className="section-view-all">Ver todos</a>
-          </div>
-          <Videos />
-        </section>
-        
-        <section className="section">
-          <div className="section-header">
-            <h2>Contáctanos</h2>
-          </div>
-          {/*<Contact />*/}
-        </section>
+        </div>
       </div>
+      {/* Bottom row - Contact */}
+      <ContactForm className="contact-section"/>
     </div>
   );
 }
