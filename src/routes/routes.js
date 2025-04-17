@@ -1,4 +1,4 @@
-import Home from "pages/MainPage/MainPage.js";
+import Home from "pages/MainPage/MainPage";
 import About from 'pages/AboutUs/AboutUs.js';
 import Events from 'pages/Events/Events.js';
 import RatingSelection from 'pages/RankingSelection/RankingSelection.js';

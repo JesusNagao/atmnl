@@ -1,41 +1,72 @@
-import { useState } from "react";
-//import './News.css';
+// News.jsx
+import React, { useState, useEffect } from 'react';
+import './News.css';
 
+// This would normally be fetched from an API
+const dummyNews = [
+  {
+    id: 1,
+    title: "Torneo Estatal 2025 - Fechas confirmadas",
+    date: "15/04/2025",
+    summary: "La Asociación de Tenis de Mesa de Nuevo León anuncia las fechas oficiales para el Torneo Estatal 2025...",
+    image: "/images/news/torneo-estatal.jpg"
+  },
+  {
+    id: 2,
+    title: "Resultados del Circuito Nacional Sub-21",
+    date: "10/04/2025",
+    summary: "Nuestros representantes estatales lograron destacar en el Circuito Nacional Sub-21 celebrado en Guadalajara...",
+    image: "/images/news/circuito-sub21.jpg"
+  },
+  {
+    id: 3,
+    title: "Clínica de entrenamiento con el campeón nacional",
+    date: "05/04/2025",
+    summary: "No te pierdas la clínica especial de entrenamiento que impartirá el actual campeón nacional el próximo fin de semana...",
+    image: "/images/news/clinica.jpg"
+  }
+];
 
-export default function News(){
+const NewsCard = ({ title, date, summary, image }) => {
+  return (
+    <div className="news-card">
+      <div className="news-image">
+        <img src={image || "/images/news/default.jpg"} alt={title} />
+      </div>
+      <div className="news-content">
+        <h3>{title}</h3>
+        <p className="news-date">{date}</p>
+        <p className="news-summary">{summary}</p>
+        <a href="#" className="read-more">Leer más</a>
+      </div>
+    </div>
+  );
+};
 
-    const [news, setNews] = useState('')
-    const [pending, setPending] = useState(true)
+const News = () => {
+  const [news, setNews] = useState([]);
 
-    function getNews(){
-        fetch('http://localhost:3000/News').then(result => {
-            return result.json();
-        }).then(result => {
-            setNews(result)
-        }).then(() => {
-            setPending(false)
-        })
-    }
+  useEffect(() => {
+    // In a real app, you would fetch news from an API
+    setNews(dummyNews);
+  }, []);
 
-    window.addEventListener('load', getNews())
+  return (
+    <div className="news-container">
+      {news.slice(0, 3).map((item) => (
+        <NewsCard
+          key={item.id}
+          title={item.title}
+          date={item.date}
+          summary={item.summary}
+          image={item.image}
+        />
+      ))}
+      <div className="news-view-all">
+        <a href="/noticias" className="view-all-button">Ver todas las noticias</a>
+      </div>
+    </div>
+  );
+};
 
-    if (pending){
-        return(
-            <div className="newsContainer" onLoad={getNews}>
-                <div className="loadingNews">
-                    <h1>Loading</h1>
-                </div>
-            </div>
-        );
-    }
-
-    return(
-        <div className="newsContainer">
-            <div className="loadedNews">
-                <h1>Loaded</h1>
-                <h2>{news[0].name}</h2>
-            </div>
-        </div>
-    );
-        
-}
+export default News;

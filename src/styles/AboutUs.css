@@ -163,9 +163,11 @@
 
 .category-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, 400px); /* columnas fijas */
   gap: 1.5rem;
+  justify-content: center; /* centra el grid completo */
 }
+
 
 .team-card {
   background-color: white;
@@ -181,7 +183,7 @@
 }
 
 .team-image-container {
-  height: inherit;
+  height: 300px;
   overflow: hidden;
 }
 
