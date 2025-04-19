@@ -2,6 +2,7 @@
 .mainpage {
   font-family: 'Roboto', 'Segoe UI', sans-serif;
   background-color: #f5f7fa;
+  width: 100%;
 }
 
 .main-container {
@@ -116,24 +117,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
-}
-
-.contact-form .form-group {
-  margin-bottom: 15px;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-.contact-form textarea {
-  min-height: 120px;
-  resize: vertical;
 }
 
 .submit-button {

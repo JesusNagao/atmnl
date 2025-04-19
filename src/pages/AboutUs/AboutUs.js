@@ -27,35 +27,35 @@ export default function AboutUs() {
     {
       id: 3,
       name: 'Lic. Rafael Rodriguez Meza',
-      position: 'Tesorero',
-      description: 'Encargado de finanzas y patrocinios para la asociación.',
-      image: '/api/placeholder/300/300'
-    },
-    {
-      id: 4,
-      name: 'Ing. Brandon Hernández Bonilla',
       position: 'Secretario',
       description: 'Gestiona la comunicación y documentación oficial.',
       image: '/api/placeholder/300/300'
     },
     {
+      id: 4,
+      name: 'Ing. Brandon Hernández Bonilla',
+      position: 'Comisario',
+      description: 'Encargado de la supervisión y cumplimiento de normas.',
+      image: '/api/placeholder/300/300'
+    },
+    {
       id: 5,
-      name: 'Roberto Garza',
-      position: '',
-      description: 'Responsable del desarrollo técnico de jugadores y entrenadores.',
+      name: 'Lic. Alberto Yaret Martinez Patiño',
+      position: 'Vocal de Consejo',
+      description: 'Encargado de la comunicación entre los deportistas y la asociación.',
       image: '/api/placeholder/300/300'
     },
     {
       id: 6,
       name: 'Ing. Jesus Leobardo Nagao Álvarez',
       position: 'Vocal Deportivo',
-      description: 'Representante deportivo del consejo, encargado de hablar, escuchar, y mejorar a base de conversaciones con los deportistas. Es el representante que nos ayuda a saber los problemas de aquellos anexados con la asociación.',
+      description: 'Encargado de la organización de eventos deportivos y competiciones.',
       image: VocalDeportivo
     },
     {
       id: 7,
-      name: 'Fernando Torres',
-      position: 'Relaciones Públicas',
+      name: 'Lic. Carlos Eduardo Vargas Barajas',
+      position: 'Tesorero',
       description: 'Maneja la presencia mediática y relaciones institucionales.',
       image: '/api/placeholder/300/300'
     }
