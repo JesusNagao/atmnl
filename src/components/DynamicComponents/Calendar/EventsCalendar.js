@@ -1,6 +1,6 @@
 // Calendar.jsx
 import React, { useState, useEffect } from 'react';
-import 'styles/MainPage/Event.card.css';
+import 'styles/MainPage/eventCard.css'; // Assuming you have a CSS file for styling
 
 // This would normally be fetched from an API
 const dummyEvents = [
