@@ -1,9 +1,10 @@
 import { useState } from 'react';
-import 'styles/AboutUs.css';
-import Presidente from 'assets/AboutUs/Panes.jpg'; 
-import Vicepresidente from 'assets/AboutUs/Andrew.jpg'; 
-import VocalDeportivo from 'assets/AboutUs/Nagao.jpg'; 
-import IntroBanner from 'components/DynamicComponents/IntroBanner/IntroBanner';
+import './AboutUs.css';
+import Presidente from '../../../assets/AboutUs/Panes.jpg'; 
+import Vicepresidente from '../../../assets/AboutUs/Andrew.jpg'; 
+import VocalDeportivo from '../../../assets/AboutUs/Nagao.jpg'; 
+import { Link, useLocation } from 'react-router-dom';
+import IntroBanner from '../../DynamicComponents/IntroBanner/IntroBanner';
 
 export default function AboutUs() {
   const [activeTab, setActiveTab] = useState('team');
@@ -27,35 +28,35 @@ export default function AboutUs() {
     {
       id: 3,
       name: 'Lic. Rafael Rodriguez Meza',
-      position: 'Secretario',
-      description: 'Gestiona la comunicación y documentación oficial.',
+      position: 'Tesorero',
+      description: 'Encargado de finanzas y patrocinios para la asociación.',
       image: '/api/placeholder/300/300'
     },
     {
       id: 4,
       name: 'Ing. Brandon Hernández Bonilla',
-      position: 'Comisario',
-      description: 'Encargado de la supervisión y cumplimiento de normas.',
+      position: 'Secretario',
+      description: 'Gestiona la comunicación y documentación oficial.',
       image: '/api/placeholder/300/300'
     },
     {
       id: 5,
-      name: 'Lic. Alberto Yaret Martinez Patiño',
-      position: 'Vocal de Consejo',
-      description: 'Encargado de la comunicación entre los deportistas y la asociación.',
+      name: 'Roberto Garza',
+      position: '',
+      description: 'Responsable del desarrollo técnico de jugadores y entrenadores.',
       image: '/api/placeholder/300/300'
     },
     {
       id: 6,
       name: 'Ing. Jesus Leobardo Nagao Álvarez',
       position: 'Vocal Deportivo',
-      description: 'Encargado de la organización de eventos deportivos y competiciones.',
+      description: 'Representante deportivo del consejo, encargado de hablar, escuchar, y mejorar a base de conversaciones con los deportistas. Es el representante que nos ayuda a saber los problemas de aquellos anexados con la asociación.',
       image: VocalDeportivo
     },
     {
       id: 7,
-      name: 'Lic. Carlos Eduardo Vargas Barajas',
-      position: 'Tesorero',
+      name: 'Fernando Torres',
+      position: 'Relaciones Públicas',
       description: 'Maneja la presencia mediática y relaciones institucionales.',
       image: '/api/placeholder/300/300'
     }
