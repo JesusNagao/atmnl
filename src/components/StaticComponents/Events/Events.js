@@ -1,5 +1,4 @@
 // Events.js
-import React from 'react';
 import { Calendar, InfoIcon } from 'lucide-react';
 import './Events.css';
 

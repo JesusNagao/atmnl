@@ -4,7 +4,9 @@
     gap: 30px;
     align-items: start;
   }
-  
+  button {
+    border: 0px;
+  }
   .contact-info {
     background-color: #f8fafc;
     padding: 25px;

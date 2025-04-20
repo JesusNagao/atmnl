@@ -48,7 +48,8 @@ const EventCard = ({ title, date, location, categories, registrationDeadline }) 
       <p className="event-deadline">
         Inscripciones hasta: {registrationDeadline}
       </p>
-      <a href="#" className="event-details-button">Ver detalles</a>
+      <button className="event-details-button" onClick={() => window.location.href = "#"}>Ver detalles</button>
+
     </div>
   );
 };

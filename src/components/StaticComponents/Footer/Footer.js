@@ -28,10 +28,10 @@ const Footer = () => {
             <div className="footer-section">
               <h3 className="footer-title">Connect With Us</h3>
               <ul className="footer-links-list">
-                <li className="footer-link-item"><a href="#" className="footer-link">Facebook</a></li>
-                <li className="footer-link-item"><a href="#" className="footer-link">Twitter</a></li>
-                <li className="footer-link-item"><a href="#" className="footer-link">Instagram</a></li>
-                <li className="footer-link-item"><a href="#" className="footer-link">Contact Us</a></li>
+                <li className="footer-link-item"><button className="event-details-button" onClick={() => window.location.href = "https://www.facebook.com/asociaciondetenisdemasedenuevoleon"}>Facebook</button></li>
+                <li className="footer-link-item"><button className="event-details-button" onClick={() => window.location.href = "https://www.facebook.com/asociaciondetenisdemasedenuevoleon"}>Facebook</button></li>
+                <li className="footer-link-item"><button className="event-details-button" onClick={() => window.location.href = "https://www.facebook.com/asociaciondetenisdemasedenuevoleon"}>Facebook</button></li>
+                <li className="footer-link-item"><button className="event-details-button" onClick={() => window.location.href = "https://www.facebook.com/asociaciondetenisdemasedenuevoleon"}>Facebook</button></li>
               </ul>
             </div>
           </div>

@@ -197,7 +197,7 @@ export default function AboutUs() {
                     <p>Monterrey, Nuevo León, México</p>
                     <p>C.P. 64000</p>
                     <p>Teléfono: (81) 1234-5678</p>
-                    <p>Email: <a href="mailto:contacto@tenisdemesanl.mx">contacto@tenisdemesanl.mx</a></p>
+                    <p>Email: <a href="mailto:atmnl388@gmail.com">atmnl388@gmail.com</a></p>
                   </address>
                 </div>
                 
@@ -216,15 +216,6 @@ export default function AboutUs() {
                       <span className="day">Domingos:</span>
                       <span className="time">Cerrado</span>
                     </div>
-                  </div>
-                </div>
-                
-                <div className="contact-block social">
-                  <h3>Redes Sociales</h3>
-                  <div className="social-links">
-                    <a href="#" className="social-link facebook">Facebook</a>
-                    <a href="#" className="social-link instagram">Instagram</a>
-                    <a href="#" className="social-link twitter">Twitter</a>
                   </div>
                 </div>
                 

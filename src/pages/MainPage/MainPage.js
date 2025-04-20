@@ -1,6 +1,6 @@
 // MainPage.jsx
 import React from 'react';
-import News from 'components/DynamicComponents/News/News';
+import News from 'components/DynamicComponents/News/NewsSlider';
 import Ranking from 'components/DynamicComponents/Ranking/Ranking-module';
 import Videos from 'components/DynamicComponents/Videos/Videos';
 import Calendar from 'components/DynamicComponents/Calendar/EventsCalendar';

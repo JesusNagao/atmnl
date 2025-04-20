@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ArrowUp, ArrowDown, Minus, Star, Calendar, Award, Users, Info, Bell, Home, ChevronLeft } from 'lucide-react';
+import { ArrowUp, ArrowDown, Minus, Star, Calendar, Award, Users, Info, Bell, ChevronLeft } from 'lucide-react';
 import 'styles/Ranking.css';
 import IntroBanner from 'components/DynamicComponents/IntroBanner/IntroBanner';
 
@@ -25,21 +25,19 @@ const CategoryMenu = ({ categories, activeCategory, onCategoryChange }) => {
           const categoryLinkClass = isActive ? 'category-link active' : 'category-link';
           
           return (
-            <a 
+            // Use a button instead of an anchor tag for better accessibility
+            <button 
               key={category} 
-              href="#" 
               className={categoryLinkClass}
-              onClick={(e) => {
-                e.preventDefault();
-                onCategoryChange(category);
-              }}
+              onClick={() => onCategoryChange(category)}
             >
               {isActive && (
                 <Star className="category-icon" />
               )}
               {formatCategoryName(category)}
-            </a>
-          );
+            </button>
+            // Uncomment the following line if you want to use anchor tags
+          )
         })}
       </nav>
     </div>
@@ -91,7 +89,7 @@ const NewsSection = ({ news }) => {
           <NewsCard key={item.id} {...item} />
         ))}
         <div className="view-all-link">
-          <a href="#" className="view-all-text">
+          <a href="/news" className="view-all-text">
             View all news →
           </a>
         </div>
@@ -303,7 +301,7 @@ export default function RankingsPage() {
   const isBorregos = ratingType === 'circuito-borregos';
   
   // Set appropriate categories based on rating type
-  const nationalCategories = [
+  const nationalCategories = useMemo(() => [
     "varonil", 
     "femenil", 
     "sub-19-varonil", 
@@ -314,15 +312,15 @@ export default function RankingsPage() {
     "sub-13-femenil",
     "sub-11-varonil",
     "sub-11-femenil"
-  ];
+  ], []);
   
-  const borregosCategories = [
+  const borregosCategories = useMemo(() =>[
     "1ra-division", 
     "2da-division", 
     "3ra-division", 
     "4ta-division",
     "5ta-division"
-  ];
+  ], []);
   
   const categories = isNational ? nationalCategories : borregosCategories;
   
@@ -361,7 +359,7 @@ export default function RankingsPage() {
     };
     
     fetchData();
-  }, [ratingType, isNational]);
+  }, [ratingType, isNational, nationalCategories, borregosCategories]);
   
   // Efecto separado para el jugador destacado que depende de activeCategory
   useEffect(() => {
