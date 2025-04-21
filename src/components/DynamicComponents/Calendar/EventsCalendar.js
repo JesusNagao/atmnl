@@ -63,7 +63,7 @@ const Calendar = () => {
   }, []);
 
   return (
-    <div className="calendar-container">
+    <div id="calendar-container">
       <div className="events-grid">
         {events.map((event) => (
           <EventCard

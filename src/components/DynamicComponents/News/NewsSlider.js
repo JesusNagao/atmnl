@@ -9,16 +9,16 @@ const dummyNews = [
     title: "Torneo Estatal 2025 - Fechas confirmadas",
     date: "15/04/2025",
     summary: "La Asociación de Tenis de Mesa anuncia las fechas oficiales para el Torneo Estatal 2025. El evento se celebrará del 12 al 14 de junio en el Pabellón Deportivo Central.",
-    image: "assets/news/torneo-estatal.png",
+    image: "/images/news/torneo-estatal.png",
     tags: ["Torneos", "Oficial"],
     author: "Admin"
   },
   {
     id: 2,
-    title: "Resultados del Circuito Nacional Sub-21",
+    title: "Resultados del Circuito Borregos",
     date: "10/04/2025",
     summary: "Nuestros representantes estatales lograron destacar en el Circuito Nacional Sub-21 celebrado en Guadalajara. Tres medallas de oro y dos de plata para nuestro equipo.",
-    image: "/images/news/circuito-sub21.jpg",
+    image: "/images/news/circuito-borregos.png",
     tags: ["Competición", "Sub-21"],
     author: "Equipo Técnico"
   },
@@ -36,7 +36,7 @@ const dummyNews = [
     title: "Nuevo sistema de ranking implementado",
     date: "01/04/2025",
     summary: "A partir de este mes, la federación utilizará un nuevo sistema de cálculo para el ranking nacional. Este cambio busca reflejar mejor el rendimiento real de los jugadores.",
-    image: "/images/news/ranking.jpg",
+    image: "/images/news/ranking-oficial.jpeg",
     tags: ["Ranking", "Oficial"],
     author: "Comité Técnico"
   }

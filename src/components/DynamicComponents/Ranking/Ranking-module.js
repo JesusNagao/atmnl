@@ -53,7 +53,7 @@ const Ranking = () => {
         <div className="last-updated">
           Última actualización: 15/04/2025
         </div>
-        <a href="/ranking" className="ranking-link">Ver ranking completo</a>
+        <a href="/ranking-selection" className="ranking-link">Ver ranking completo</a>
       </div>
     </div>
   );
