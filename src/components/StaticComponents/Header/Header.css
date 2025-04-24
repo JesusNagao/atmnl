@@ -1,9 +1,11 @@
 /* General Header wrapper */
 .Header {
-    position: fixed;
+    position: -webkit-sticky;
+    position: sticky;
+    top: -25px;
     width: 100%;
     z-index: 10;
-    top: 0;
+    box-shadow: #7e6712 0px 2px 5px;
   }
   
   /* Top header bar */
@@ -58,8 +60,8 @@
   .LowHeader {
     display: flex;
     align-items: center;
-    background-color: #2d4062;
-    height: 60px;
+    background-color: #1d334e;
+    height: 65px;
     padding: 0 3%;
     box-sizing: border-box;
   }
@@ -73,7 +75,9 @@
   
   /* Logo image */
   .ATMNL_Logo {
-    max-height: 40px;
+    border-radius: 30px;
+    background-color: azure;
+    max-height: 55px;
     width: auto;
     display: block;
   }
@@ -115,10 +119,10 @@
     position: absolute;
     content: '';
     left: 0;
-    bottom: -2px;
+    bottom: 2px;
     height: 2px;
     width: 100%;
-    background: white;
+    background: #7e6712;
     transform: scaleX(0);
     transform-origin: right;
     transition: transform 0.3s ease-out;

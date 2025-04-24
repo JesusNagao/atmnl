@@ -1,5 +1,5 @@
 .footer {
-  background-color: #111827;
+  background-color: #181611;
   color: white;
   margin-top: 3rem;
   width: 100%;
@@ -76,11 +76,23 @@
 .footer-divider {
   margin-top: 2rem;
   padding-top: 2rem;
-  border-top: 1px solid #374151;
+  border-top: 1px solid #656256;
   text-align: center;
   color: #6b7280;
 }
 
+.footer-button {
+  background-color: #454542;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.footer-button:hover {
+  background-color: #2f2b22;
+}
 @media (min-width: 1024px) {
   .footer-grid {
     grid-template-columns: repeat(3, 1fr);

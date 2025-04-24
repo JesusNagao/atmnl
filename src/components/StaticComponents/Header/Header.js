@@ -27,10 +27,10 @@ export default function Header() {
 
       <div className="LowHeader">
         <Link to="/" className="logo-link">
-          <img className="ATMNL_Logo" src="/images/AT.png" alt="ATMNL logo" />
+          <img className="ATMNL_Logo" src="/images/ATMNL.png" alt="ATMNL logo" />
         </Link>
         <nav className="header-nav">
-          <Link to="/federacion" className={location.pathname === '/federacion' ? 'Nav active' : 'Nav'}>Federación</Link>
+          <Link to="/federacion" className={location.pathname === '/federacion' ? 'Nav active' : 'Nav'}>Nosotros</Link>
           <Link to="/calendario" className={location.pathname === '/calendario' ? 'Nav active' : 'Nav'}>Calendario</Link>
           <Link to="/ranking-selection" className={location.pathname === '/ranking-selection' ? 'Nav active' : 'Nav'}>Ranking</Link>
         </nav>

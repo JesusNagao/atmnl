@@ -1,4 +1,4 @@
-import Calendar from 'components/StaticComponents/Events/Events'
+import Calendar from 'components/StaticComponents/Calendar/Calendar'
 
 export default function Events() {
     return (

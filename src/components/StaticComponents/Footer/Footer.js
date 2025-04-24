@@ -18,7 +18,7 @@ const Footer = () => {
             <div className="footer-section">
               <h3 className="footer-title">Quick Links</h3>
               <ul className="footer-links-list">
-                <li className="footer-link-item"><a href="/federacion" className="footer-link">Federación</a></li>
+                <li className="footer-link-item"><a href="/federacion" className="footer-link">Nosotros</a></li>
                 <li className="footer-link-item"><a href="/ranking" className="footer-link">Rankings</a></li>
                 {/*<li className="footer-link-item"><a href="#" className="footer-link">News</a></li>
                 <li className="footer-link-item"><a href="#" className="footer-link">Players</a></li>*/}
@@ -28,10 +28,10 @@ const Footer = () => {
             <div className="footer-section">
               <h3 className="footer-title">Connect With Us</h3>
               <ul className="footer-links-list">
-                <li className="footer-link-item"><button className="event-details-button" onClick={() => window.location.href = "https://www.facebook.com/asociaciondetenisdemasedenuevoleon"}>Facebook</button></li>
-                <li className="footer-link-item"><button className="event-details-button" onClick={() => window.location.href = "https://www.facebook.com/asociaciondetenisdemasedenuevoleon"}>Facebook</button></li>
-                <li className="footer-link-item"><button className="event-details-button" onClick={() => window.location.href = "https://www.facebook.com/asociaciondetenisdemasedenuevoleon"}>Facebook</button></li>
-                <li className="footer-link-item"><button className="event-details-button" onClick={() => window.location.href = "https://www.facebook.com/asociaciondetenisdemasedenuevoleon"}>Facebook</button></li>
+                <li className="footer-link-item"><button className="footer-button" onClick={() => window.location.href = "https://www.facebook.com/asociaciondetenisdemasedenuevoleon"}>Facebook</button></li>
+                <li className="footer-link-item"><button className="footer-button" onClick={() => window.location.href = "https://www.facebook.com/asociaciondetenisdemasedenuevoleon"}>Facebook</button></li>
+                <li className="footer-link-item"><button className="footer-button" onClick={() => window.location.href = "https://www.facebook.com/asociaciondetenisdemasedenuevoleon"}>Facebook</button></li>
+                <li className="footer-link-item"><button className="footer-button" onClick={() => window.location.href = "https://www.facebook.com/asociaciondetenisdemasedenuevoleon"}>Facebook</button></li>
               </ul>
             </div>
           </div>
