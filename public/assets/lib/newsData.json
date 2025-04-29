@@ -1,0 +1,25 @@
+{
+    "news": [
+      {
+        "id": 1,
+        "title": "Circuito Borregos - Fechas confirmadas",
+        "date": "15/04/2025, ",
+        "summary": "La Asociación de Tenis de Mesa de Nuevo León anuncia las fechas oficiales para el Torneo Estatal 2025...",
+        "image": "/images/news/torneo-estatal.jpg"
+      },
+      {
+        "id": 2,
+        "title": "Resultados del Circuito Nacional Sub-21",
+        "date": "10/04/2025",
+        "summary": "Nuestros representantes estatales lograron destacar en el Circuito Nacional Sub-21 celebrado en Guadalajara...",
+        "image": "/images/news/circuito-sub21.jpg"
+      },
+      {
+        "id": 3,
+        "title": "Clínica de entrenamiento con el campeón nacional",
+        "date": "05/04/2025",
+        "summary": "No te pierdas la clínica especial de entrenamiento que impartirá el actual campeón nacional el próximo fin de semana...",
+        "image": "/images/news/clinica.jpg"
+      }
+    ]
+  }
