@@ -10,6 +10,7 @@
 
 # production
 /build
+/ATMNL Documentos
 
 # misc
 .DS_Store
